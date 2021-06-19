@@ -9,7 +9,7 @@ output: beamer_presentation
 
 # Long reads and de Bruijn graphs? 
 
-![](images/orly-owl.jpg){ width=50% }
+![](presentation/images/orly-owl.jpg){ width=50% }
 
 # Repeat graphs
 
