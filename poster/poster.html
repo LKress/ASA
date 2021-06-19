@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+
+
+
+<title>Paper Impact: Assembly of long, error-prone reads using repeat graphs</title>
+
+
+
+
+
+<style>
+@page {
+size: 46.8in 33.1in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 45px;
+width: 46.8in;
+height: 33.1in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 46.8in;
+height: 33.1in;
+padding: 0cm;
+}
+.title_container {
+width: 100%;
+height: 15%;
+overflow: hidden;
+background-color: #88c0d0;
+border: 0 solid #88c0d0
+;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #88c0d0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #88c0d0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #008080;
+text-decoration: none;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #008080;
+text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+color: #008080;
+text-decoration: none;
+}
+
+/* selected link */
+a:active {
+color: #008080;
+text-decoration: none;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #88c0d0;
+-moz-column-rule-color: #88c0d0;
+column-rule-color: #88c0d0;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: 46.8in;
+height: calc(100% - 17%);
+padding-top: calc(33.1in * 0.01);
+padding-bottom: calc(33.1in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 0;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #88c0d0;
+background-color: #88c0d0;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r, pre.sourceCode.python {
+background-color: #ffffff20;
+border: solid #008080 1mm;
+border-radius: 0.5em;
+padding: 4mm;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+div.sourceCode {
+background-color: transparent;
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+}
+code.sourceCode.r, code.sourceCode.python {
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #00808024;
+color: #008080;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+.caption {
+font-size: 20pt;
+}
+.table caption {
+font-size: 20pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00808024;
+color: #88c0d0;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+color: #000000
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src=GoetheLogo.png style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Paper Impact: Assembly of long, error-prone reads using repeat graphs</h1>
+<h3 id="author">Johannes Hausmann<sup>1</sup>, Luis Kress<sup>1</sup></h3>
+<h5 id="affiliation"><sup>1</sup> Goethe Universität Frankfurt</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<h1 id="key-references">Key References</h1>
+<ul>
+<li><p>Assembly of long error-prone reads using de Bruijn graphs.</p>
+<ul>
+<li>Authors: Yu Lin (First), Pavel A. Pevzner (Last and corresponding)</li>
+<li>Journal: PNAS (113 (52), 8396-8405)</li>
+<li>Year: 2016</li>
+<li>Citations: 126 (Google scholar)</li>
+<li>Reason: The presented algorithm Flye is an improvement of the tool presented in this article.</li>
+</ul></li>
+<li><p>De novo repeat classification and fragment assembly.</p>
+<ul>
+<li><p>Authors: Paul A. Pevzner (First), Glenn Tesler (Last and corresponding)</p></li>
+<li><p>Journal: CSH Press, Genome Research (volume 14, 1786-1796)</p></li>
+<li><p>Year: 2004</p></li>
+<li><p>Citations: 294 (Google scholar)</p></li>
+<li><p>Reason: Basics on the repeat graph and the repeat classification problem.</p></li>
+</ul></li>
+<li><p>Ancestral reconstruction of segmental duplications reveals punctuated cores of human genome evolution.</p>
+<ul>
+<li><p>Authors: Zhaoshi Jiang (First), Evan E Eichler (Last and corresponding)</p></li>
+<li><p>Journal: Nature Genetics (volume 39, 1361-1368)</p></li>
+<li><p>Year: 2007</p></li>
+<li><p>Citations: 192 (Google scholar)</p></li>
+<li><p>Reason: The information, that repeat graphs can be used to represent mosaic structures.</p></li>
+</ul></li>
+<li><p>What is the difference between the breakpoint graph and the de Bruijn graph?</p>
+<ul>
+<li><p>Authors: Yu Lin (First), Pavel A Pevzner (Last and corresponding)</p></li>
+<li><p>Journal: BMC Genomics volume 15, Suppl 6 (S6)</p></li>
+<li><p>Year: 2014</p></li>
+<li><p>Citations: 23 (Google scholar)</p></li>
+<li><p>Reason: Groundwork publication from Pevzner. Information on the graph structure used to implement Flye. Assembly graphs created from the repeat graph are special cases of breakpoint graphs.</p></li>
+</ul></li>
+<li><p>Haplotype and Repeat Separation in Long Reads.</p>
+<ul>
+<li><p>Authors: Tischler-Höhle G.</p></li>
+<li><p>Journal: Computational Intelligence Methods for Bioinformatics and Biostatistics, CIBB 2017, 103-114</p></li>
+<li><p>Year: 2017</p></li>
+<li><p>Citations: 3 (Google scholar)</p></li>
+<li><p>Reason: The publication describes methods for repeat &amp; haplotype seperation with long reads. Resolving unbriged and highly similar repeats is realted to the challenge of overlap-filtering repeat resolution described in this publication.</p></li>
+</ul></li>
+</ul>
+<h1 id="citations-of-our-article">Citations of our article</h1>
+<ul>
+<li><p>Citations: 564 (Google scholar); 264 (PubMed); 273 (Web of Science); 356 (Cross Ref)</p></li>
+<li><p>Yearly</p>
+<ul>
+<li><p>PubMed: 2019: 24; 2020: 141; 2021: 108</p></li>
+<li><p>Altmetric: 2017: 1; 2018: 3; 2019: 58; 2020: 280; 2021: 199</p></li>
+</ul>
+<figure>
+<img src="yearly_cit.png" style="width:100.0%" alt="Citations per year (Altmetric)" /><figcaption aria-hidden="true">Citations per year (Altmetric)</figcaption>
+</figure></li>
+<li><p>Articles which cite the given paper:</p>
+<ul>
+<li><p>Fast and accurate long-read assembly with wtdbg2 (Nature Methods) (cited by: 313, Google scholar), (impact score: 10.93, 2020)</p></li>
+<li><p>De novo assembly of haplotype-resolved genomes with trio binning (Nature Biotechnology) (cited by: 151, Google scholar), (impact score: 10.71, 2018)</p></li>
+<li><p>Telomere-to-telomere assembly of a complete human X chromosome (Nature) (cited by: 180, Google scholar) (impact score: 42.778, 2019)</p></li>
+<li><p>Pathogen-induced activation of disease-suppressive functions in the endophytic root microbiome (Science) (cited by: 160, Google scholar), (impact score: 12.84, 2019)</p></li>
+<li><p>Opportunities and challenges in long-read sequencing data analysis (Genome Biology) (cited by: 180, Google scholar) (impact score: 11.71, 2020)</p></li>
+</ul></li>
+</ul>
+<h1 id="corresponding-author-pevzner">Corresponding author Pevzner</h1>
+<ul>
+<li><p>SPAdes: a new genome assembly algorithm and its applications to single-cell sequencing</p>
+<ul>
+<li>Reason: last author, 12583 citations, widely used assembly tool, (impact score 2.09; 2013)</li>
+</ul></li>
+<li><p>Initial sequencing and comparative analysis of the mouse genome</p>
+<ul>
+<li>Reason: first sequencing and assembly of the mouse genome, 7438 citations, (impact score 36; 2010)</li>
+</ul></li>
+<li><p>De novo identification of repeat families in large genomes</p>
+<ul>
+<li>Reason: corresponding author, groundwork for the given paper (Assembly of long-error prone reads) /groundwork for assembly of repeat rich genomes, 1211 citations, (impact score 5.15; 2013)</li>
+</ul></li>
+<li><p>An Eulerian path approach to DNA fragment assembly</p>
+<ul>
+<li>Reason: first author, groundwork for further short read assembly tools, 1571 citations, (impact score 9.81; 2013)</li>
+</ul></li>
+<li><p>De Novo Peptide Sequencing via Tandem Mass Spectrometry</p>
+<ul>
+<li>Reason: last author, development of de novo peptide sequencing which is still used today, 747 citations, (impact score 2.09; 2013)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
