@@ -42,7 +42,7 @@ date: 05.07.2021
 ![](presentation/images/repeat_graph_3.png){ width=60% }
 
 
-
+<!--
 # Long reads and de Bruijn graphs? 
 
 >- de Bruijn graphs need correct bases
@@ -52,6 +52,8 @@ date: 05.07.2021
 # Long reads and de Bruijn graphs? 
 
 ![](presentation/images/orly-owl.jpg){ width=50% }
+
+-->
 
 # Repeat graphs
 
