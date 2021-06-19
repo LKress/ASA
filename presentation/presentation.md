@@ -2,8 +2,46 @@
 title: Assembly of long, error-pront reads using repeat graphs
 author: Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, and Pavel A. Pevzner
 date: 05.07.2021
-output: beamer_presentation
 ---
+
+# Long read assembly
+
+>- error rate long read <-> short read
+
+>- assembly fragmentation -> repeats
+
+>- Flye shoult resolve these repeats correctly
+
+# Disjointigs
+
+>- current assemblers use much time on correct contig assembly
+
+>- Flye uses a different approach:
+
+>- generate paths from overlapping reads without checking for correct assembly -> disjointigs
+
+>![](presentation/images/repeat_graph_1.png){ width=60% }
+
+# Disjointigs
+
+- current assemblers use much time on correct contig assembly
+
+- Flye uses a different approach:
+
+- generate paths from overlapping reads without checking for correct assembly -> disjointigs
+
+![](presentation/images/repeat_graph_2.png){ width=60% }
+
+# Disjointigs
+
+- current assemblers use much time on correct contig assembly
+
+- Flye uses a different approach:
+    - generate paths from overlapping reads without checking for correct assembly -> disjointigs
+
+![](presentation/images/repeat_graph_3.png){ width=60% }
+
+
 
 # Long reads and de Bruijn graphs? 
 
