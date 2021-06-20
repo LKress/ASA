@@ -14,13 +14,16 @@ date: 05.07.2021
 
 # Disjointigs
 
->- current assemblers use much time on correct contig assembly
+- current assemblers use much time on correct contig assembly
 
->- Flye uses a different approach:
+- Flye uses a different approach:
 
->- generate paths from overlapping reads without checking for correct assembly -> disjointigs
+- generate paths from overlapping reads without checking for correct assembly -> disjointigs
 
->![](presentation/images/repeat_graph_1.png){ width=60% }
+![](presentation/images/repeat_graph_1.png){ width=60% }
+
+![](presentation/images/orly-owl.jpg){ width=30% }
+
 
 # Disjointigs
 
@@ -37,23 +40,41 @@ date: 05.07.2021
 - current assemblers use much time on correct contig assembly
 
 - Flye uses a different approach:
-    - generate paths from overlapping reads without checking for correct assembly -> disjointigs
+
+- generate paths from overlapping reads without checking for correct assembly -> disjointigs
 
 ![](presentation/images/repeat_graph_3.png){ width=60% }
 
 
-<!--
-# Long reads and de Bruijn graphs? 
+# Repeat graph creation
 
->- de Bruijn graphs need correct bases
+![](presentation/images/dot_plot_to_repeat1.png)
 
->- otherwise tangled graph
+# Repeat graph creation
 
-# Long reads and de Bruijn graphs? 
+![](presentation/images/dot_plot_to_repeat2.png)
 
-![](presentation/images/orly-owl.jpg){ width=50% }
+# Repeat graph creation
 
--->
+![](presentation/images/dot_plot_to_repeat3.png)
+
+# Repeat graph creation
+
+![](presentation/images/dot_plot_to_repeat4.png)
+
+# Repeat resolution
+
+# Results
+
+![](presentation/images/results_HUMAN.png){ width=100% }
+
+# References
+
+# Appendix
+
+# Dot plot creation
+
+![](presentation/images/dot_plot_creation.png)
 
 # Repeat graphs
 
@@ -71,11 +92,9 @@ date: 05.07.2021
 
 >- We thus argue that the time has come to explain that the breakpoint graphs and the de Bruijn graphs are two identical data structures (if one ignores a cosmetic difference between them) as they both represent specific instances of a general notion of the A-Bruijn graph introduced in [13]. The A-Bruijn graphs are based on representing genomes as sets of labeled paths and further gluing identically labeled edges (breakpoint graphs) or vertices (de Bruijn graphs) in the resulting paths.
 
-# Repeat resolution
+>- de Bruijn graphs need correct bases
 
-# Results
-
->- human dataset
+>- otherwise tangled graph
 
 # Segmental duplications
 
