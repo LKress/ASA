@@ -102,3 +102,18 @@ date: 05.07.2021
 
 >- Segmental duplications are duplicated blocks of genomic DNA typically ranging in size from 1-200 kb (IHGSC 2001)
 >- They often contain sequence features such as high-copy repeats and gene sequences with intron-exon structure. 
+
+
+# Contigity improvement
+
+![](presentation/images/contigity_improvement.png)
+
+- colors are contigs
+
+- color changes -> fragmented
+
+<!--
+From: 
+https://www.youtube.com/watch?v=z6elrX-ZzW8&t=636s
+(Youtube nanopore talk)
+-->
