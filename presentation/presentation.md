@@ -2,6 +2,10 @@
 title: Assembly of long, error-pront reads using repeat graphs
 author: Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, and Pavel A. Pevzner
 date: 05.07.2021
+titlepage-color: "3C9F53"
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont[Path=presentation/Old_Standard_TT/]{OldStandardTT-Regular.ttf}
 ---
 
 # Long read assembly
