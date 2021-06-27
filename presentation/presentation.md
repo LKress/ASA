@@ -54,21 +54,28 @@ mainfont: "Noto Sans"
 
 - generate paths from overlapping reads without checking for correct assembly -> disjointigs
 
-![](presentation/images/repeat_graph_3.png){ width=60% }
+![](presentation/images/repeat_graph_3.png){ width=100% }
 
 
 # Repeat graph creation
 
+![](presentation/images/genome.png){ width=100% }
 
 # Repeat graph creation
 
+![](presentation/images/genome_and_reads.png){ width=100% }
 
 # Repeat graph creation
 
+![](presentation/images/disjointigs.png){ width=100% }
+
 # Repeat graph creation
 
+![](presentation/images/dot_plot.png){ width=60% }
 
-# Repeat resolution
+# Repeat graph creation
+
+![](presentation/images/plot_to_repeat_graph.png){ width=100% }
 
 # Results
 
