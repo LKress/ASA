@@ -5,7 +5,7 @@ date: 05.07.2021
 titlepage-color: "3C9F53"
 header-includes:
   - \usepackage{fontspec}
-  - \setmainfont[Path=presentation/Old_Standard_TT/]{OldStandardTT-Regular.ttf}
+mainfont: "Noto Sans"
 ---
 
 # Long read assembly
