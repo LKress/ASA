@@ -8,25 +8,32 @@ header-includes:
 mainfont: "Noto Sans"
 ---
 
-# Long read assembly
+# Genome assembly in general
+
+>- reconstruct target sequence from the reads
+
+>- different graph structures (De-Bruijn, Overlap-layout, String)
+
+>- repeats $\rightarrow$ assembly fragmentation
 
 >- error rate long read <-> short read
 
->- assembly fragmentation -> repeats
-
->- Flye shoult resolve these repeats correctly
+>- Flye should resolve these repeats correctly
 
 # Disjointigs
 
-- current assemblers use much time on correct contig assembly
+>- most assemblers spent much time on correct contig assembly
 
-- Flye uses a different approach:
-
-- generate paths from overlapping reads without checking for correct assembly -> disjointigs
-
-![](presentation/images/repeat_graph_1.png){ width=60% }
+>- Flye uses a different approach:
+	+ we don't care (at least at the initial stage)
+	+ correct assembly graph 
+>- generate paths from overlapping reads without checking for correct assembly -> disjointigs
 
 ![](presentation/images/orly-owl.jpg){ width=30% }
+
+<!--
+![](presentation/images/repeat_graph_1.png){ width=60% }
+-->
 
 
 # Disjointigs
@@ -52,19 +59,14 @@ mainfont: "Noto Sans"
 
 # Repeat graph creation
 
-![](presentation/images/dot_plot_to_repeat1.png)
 
 # Repeat graph creation
 
-![](presentation/images/dot_plot_to_repeat2.png)
 
 # Repeat graph creation
 
-![](presentation/images/dot_plot_to_repeat3.png)
-
 # Repeat graph creation
 
-![](presentation/images/dot_plot_to_repeat4.png)
 
 # Repeat resolution
 
@@ -121,3 +123,22 @@ From:
 https://www.youtube.com/watch?v=z6elrX-ZzW8&t=636s
 (Youtube nanopore talk)
 -->
+
+# Repeat graph creation
+
+![](presentation/images/dot_plot_to_repeat1.png)
+
+# Repeat graph creation
+
+![](presentation/images/dot_plot_to_repeat2.png)
+
+# Repeat graph creation
+
+![](presentation/images/dot_plot_to_repeat3.png)
+
+# Repeat graph creation
+
+![](presentation/images/dot_plot_to_repeat4.png)
+
+# Repeat resolution
+
