@@ -9,9 +9,12 @@ affiliation:
   - num: 1
     address: Goethe Universität Frankfurt
 column_numbers: 3
-logoleft_name: GoetheLogo.png
+logoleft_name: poster/images/GoetheLogo.png
 
 
+header-includes:
+- \usepackage[width=119.2truecm, height=84.4truecm,cam,pdftex,center]{crop}
+  
 
 primary_colour: "#88c0d0"
 
@@ -20,8 +23,8 @@ output:
     self_contained: false
 bibliography: packages.bib
 
-poster_width: 46.8in
-poster_height: 33.1in
+poster_width: 844mm
+poster_height: 1192mm
 ---
 
 # Key References
@@ -91,7 +94,7 @@ poster_height: 33.1in
 
     * Altmetric: 2017: 1; 2018: 3; 2019: 58; 2020: 280; 2021: 199 
 
-    ![Citations per year (Altmetric)](yearly_cit.png){ width=100% } 
+    ![Citations per year (Altmetric)](poster/images/yearly_cit.png){ width=100% } 
 
 * Articles which cite the given paper:
 

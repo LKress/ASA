@@ -1,0 +1,209 @@
+\documentclass{beamer}
+\usetheme{metropolis}           % Use metropolis theme
+\title{Assembly of long, error-pront reads using repeat graphs}
+\date{\today}
+\author{Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, and Pavel A. Pevzner}
+\institute{Johannes Hausmann, Luis Kress}
+
+\begin{document}
+  \maketitle
+  
+  %\section{First Section}
+  
+  \begin{frame}{Genome assembly in general}
+    \begin{itemize}[<+- | alert@+>]
+      \item reconstruct target sequence from the reads
+
+      \item different graph structures (De-Bruijn, Overlap-layout, String)
+
+      \item repeats $\rightarrow$ assembly fragmentation
+
+      \item error rate long read $\leftrightarrow$ short read
+
+      \item Flye should resolve these repeats correctly
+    \end{itemize}
+  \end{frame}
+
+  %\section{Second Section}
+
+  \begin{frame}{Disjointigs}
+    \begin{itemize}[<+- | alert@+>]
+      \item most assemblers spent much time on correct contig assembly
+
+      \item Flye uses a different approach \cite{kolmogorov_assembly_2019}:
+      
+      \begin{itemize}[<+- | alert@+>]
+        \item we don't care (at least at the initial stage)
+        
+        \item correct assembly graph 
+      \end{itemize}
+
+      \item generate paths from overlapping reads without checking for correct assembly $\rightarrow$ disjointigs
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Repeat Graph Creation}
+    \begin{figure}
+      \includegraphics[width=11cm]{images/genome.png}
+      \caption{Example Genome}
+      \label{fig:genome}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Repeat Graph Creation}
+    \begin{figure}
+      \includegraphics[width=11cm]{images/genome_and_reads.png}
+      \caption{Example Genome and Reads}
+      \label{fig:genome_and_reads}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Repeat Graph Creation}
+    \begin{figure}
+      \includegraphics[width=11cm]{images/disjointigs.png}
+      \caption{Example Genome, Reads and Disjointigs}
+      \label{fig:disjointigs}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Repeat Graph Creation}
+    \begin{figure}
+      \includegraphics[width=6cm]{images/dot_plot.png}
+      \caption{Breakpoint Graph}
+      \label{fig:bp_graph}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Repeat Graph Creation}
+    \begin{figure}
+      \includegraphics[width=11cm]{images/plot_to_repeat_graph.png}
+      \caption{Repeat Graph}
+      \label{fig:repeat_graph}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Results}
+    \begin{figure}
+      \includegraphics[width=10cm]{images/results_HUMAN.png}
+      \caption{Results for HUMAN testset}
+      \label{fig:results}
+    \end{figure}
+  \end{frame}
+
+  \appendix
+
+
+  \begin{frame}[allowframebreaks]{References}
+
+    \bibliography{bibliography}
+    \bibliographystyle{abbrv}
+  
+  \end{frame}
+
+  \begin{frame}{Git (presentation)}
+
+    \begin{figure}
+      \includegraphics[width=6cm]{images/qr-code.png}
+      \caption{Link to our git repo}
+      \label{fig:qr}
+    \end{figure}
+  
+  \end{frame}
+
+  \begin{frame}[standout]
+    Appendix
+  \end{frame}
+
+  \begin{frame}{Dot plot creation}
+    \begin{figure}
+      \includegraphics[width=6cm]{images/dot_plot_creation.png}
+      \caption{Dot plot creation}
+      \label{fig:dotp_creation}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Repeat graphs}
+    \begin{itemize}[<+- | alert@+>]
+      \item generalization of de bruijn graphs
+
+      \item structure
+
+      \item creation
+      
+      \begin{itemize}[<+- | alert@+>]
+
+        \item from disjointigs = random walk of reads on the repeat graph 
+      
+        \item means the repeat graph hasn't to be known
+      \end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Difference repeat graph de Bruijn graph}
+    \begin{itemize}[<+- | alert@+>]
+      \item A-Bruijn graph (alignments) generalizes the de Bruijn graph
+
+      \item We thus argue that the time has come to explain that the breakpoint graphs and the de Bruijn graphs are two identical data structures (if one ignores a cosmetic difference between them) as they both represent specific instances of a general notion of the A-Bruijn graph introduced in [13]. The A-Bruijn graphs are based on representing genomes as sets of labeled paths and further gluing identically labeled edges (breakpoint graphs) or vertices (de Bruijn graphs) in the resulting paths.
+
+      \item de Bruijn graphs need correct bases
+      
+      \item otherwise tangled graph
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Segmental duplications}
+    \begin{figure}
+      \includegraphics[width=6cm]{images/SDs.png}
+      \caption{Segmental Duplications}
+      \label{fig:SD}
+    \end{figure}
+    \begin{itemize}[<+- | alert@+>]
+      \item Segmental duplications are duplicated blocks of genomic DNA typically ranging in size from 1-200 kb (IHGSC 2001)
+
+      \item They often contain sequence features such as high-copy repeats and gene sequences with intron-exon structure. 
+    \end{itemize}
+  \end{frame}
+
+
+  \begin{frame}{Contigity improvement}
+    \begin{figure}
+      \includegraphics[width=6cm]{images/contigity_improvement.png}
+      \caption{Contigity improvements}
+      \label{fig:contig_improvements}
+    \end{figure}
+    \begin{itemize}[<+- | alert@+>]
+      \item colors are contigs
+
+      \item colors are contigs
+    \end{itemize}
+    %From: 
+    %https://www.youtube.com/watch?v=z6elrX-ZzW8&t=636s
+    %(Youtube nanopore talk)
+  \end{frame}
+
+  \begin{frame}{Contigity improvement}
+    \begin{figure}
+      \includegraphics[width=6cm]{images/contigity_improvement.png}
+      \caption{Contigity improvements}
+      \label{fig:contig_improvements}
+    \end{figure}
+    \begin{itemize}[<+- | alert@+>]
+      \item colors are contigs
+
+      \item colors are contigs
+    \end{itemize}
+  \end{frame}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
