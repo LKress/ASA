@@ -19,7 +19,7 @@ Google fonts api stuff
 
 
 
-<title>Assembly of long, error-prone reads using repeat graphs</title>
+<title>Generate Reproducible &amp; Live HTML and PDF Conference Posters Using RMarkdown</title>
 
 
 
@@ -27,36 +27,37 @@ Google fonts api stuff
 
 <style>
 @page {
-size: 844mm 1192mm;
+size: 45in 38in;
 margin: 0;
 padding: 0;
 }
 body {
 margin: 0;
 font-size: 45px;
-width: 844mm;
-height: 1192mm;
+width: 45in;
+height: 38in;
 padding: 0;
 text-align: justify;
 font-family: Palatino;
 }
 .poster_wrap {
-width: 844mm;
-height: 1192mm;
+width: 45in;
+height: 38in;
 padding: 0cm;
 }
 .title_container {
-width: calc(100% - 1cm - 1cm);
-height: calc(15% - 1cm - 1cm);
+width: 100%;
+height: 15%;
 overflow: hidden;
-background-color: #88c0d0;
-border: 1cm solid #00628f;
+background-color: #0b4545;
+border: 0 solid #0b4545
+;
 }
 .logo_left {
 float: left;
 width: 10%;
 height: 100%;
-background-color: #88c0d0;
+background-color: #0b4545;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -65,7 +66,7 @@ justify-content: center;
 float: right;
 width: 10%;
 height: 100%;
-background-color: #88c0d0;
+background-color: #0b4545;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -86,7 +87,7 @@ font-family: Palatino;
 }
 /* unvisited link */
 a:link {
-color: #00628f;
+color: #008080;
 text-decoration: none;
 }
 .mybreak {
@@ -94,19 +95,19 @@ text-decoration: none;
 }
 /* visited link */
 a:visited {
-color: #00628f;
+color: #008080;
 text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
-color: #00628f;
+color: #008080;
 text-decoration: none;
 }
 
 /* selected link */
 a:active {
-color: #00628f;
+color: #008080;
 text-decoration: none;
 }
 .poster_body {
@@ -122,9 +123,9 @@ column-rule-width: 1mm;
 -webkit-column-rule-style: dashed;
 -moz-column-rule-style: dashed;
 column-rule-style: dashed;
--webkit-column-rule-color: #88c0d0;
--moz-column-rule-color: #88c0d0;
-column-rule-color: #88c0d0;
+-webkit-column-rule-color: #0b4545;
+-moz-column-rule-color: #0b4545;
+column-rule-color: #0b4545;
 column-gap: 1em;
 padding-left: 0.5em;
 padding-right: 0.5em;
@@ -139,14 +140,14 @@ border: 0;
 font-weight: normal;
 }
 .poster_body_wrap{
-width: 844mm;
+width: 45in;
 height: calc(100% - 17%);
-padding-top: calc(1192mm * 0.01);
-padding-bottom: calc(1192mm * 0.01);
+padding-top: calc(38in * 0.01);
+padding-bottom: calc(38in * 0.01);
 background-color: #ffffff;
 }
 .poster_title h3 {
-color: #00628f;
+color: #ffffff;
 font-size: 50pt;
 margin: 0;
 border: 0;
@@ -174,8 +175,8 @@ margin-bottom: 0;
 text-align: center;
 color: #FFFFFF;
 font-size: 65pt;
-border: 0 solid #88c0d0;
-background-color: #00628f;
+border: 2mm solid #0b4545;
+background-color: #0b4545;
 border-radius: 4mm 0mm;
 margin-top: 2mm;
 margin-bottom: 2mm;
@@ -204,7 +205,7 @@ width: 100%;
 }
 pre.sourceCode.r, pre.sourceCode.python {
 background-color: #ffffff20;
-border: solid #00628f 1mm;
+border: solid #008080 1mm;
 border-radius: 0.5em;
 padding: 4mm;
 margin: auto;
@@ -226,8 +227,8 @@ border-radius: 2mm;
 code {
 font-size: 25pt;
 font-family: monospace;
-background-color: #00628f24;
-color: #00628f;
+background-color: #00808024;
+color: #008080;
 padding: 1.2mm;
 line-height: 1;
 border-radius: 2mm;
@@ -243,8 +244,8 @@ padding-bottom: 3mm;
 code {
 font-size: 1em;
 font-family: monospace;
-background-color: #00628f24;
-color: #88c0d0;
+background-color: #00808024;
+color: #0b4545;
 padding: 1.2mm;
 border-radius: 2mm;
 }
@@ -299,52 +300,52 @@ font-size: 20pt;
 <div class="title_container">
 <!-- Left Logo  -->
 <div class="logo_left">
-<img src=images/GoetheLogo.png style="width: 80%">
+<img src=https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png style="width: 80%">
 </div>
 <!-- Poster Title -->
 <div class= "poster_title">
-<h1 id="title">Assembly of long, error-prone reads using repeat graphs</h1>
-<h3 id="author">Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, Pavel A. Pevzner<sup></sup></h3>
-<h5 id="affiliation"><sup></sup> Johannes Hausmann, Luis Kress</h5>
+<h1 id="title">Generate Reproducible &amp; Live HTML and PDF Conference Posters Using RMarkdown</h1>
+<h3 id="author">Brent Thorne<sup>1, <a class="orcid" href="https://orcid.org/0000-0002-1099-3857"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>, Another G. Author<sup>2</sup></h3>
+<h5 id="affiliation"><sup>1</sup> Department of Earth Science, Brock University; <sup>2</sup> Department of Graphics and Layouts, University of Posters; Canada</h5>
 </div>
 <!-- Right Logo  -->
 <div class="logo_right">
+<img src=https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png style="width: 80%">
 </div>
 </div>
 
 <div class='poster_body_wrap'>
 <div class='poster_body'>
-<h1 id="abstract">Abstract</h1>
-<p>With the emergence and the spreading adoption of long-read technologies, the assembly of genomes has improved, which may also become the “gold-standard” for de novo assemblies. Current long read sequencing techniques still have high error rates which makes it more difficult to align these reads. Up to date long read assemblers are still not able to resolve all repeating regions correctly. Especially segmental duplications, long and highly homologous sequences resulted from duplications, are still problematic to resolve correctly. While genomic repeats can be better resolved using long reads, assembly with them is still challenging and not straightforward due to their error-prone nature. Here we present Flye a de novo assembler for long-error prone reads, by creating a precise repeat graph, built in a new manner using so called disjointigs. Flye could achive two times better contiguity for the assembly of a human Oxford Nanopore test dataset in combination with short read Illumina data in contrast to the state of the art assembler Canu. In the created repeat graph many segmental duplications are represented from which the simple ones are already resolved by the algorithm. Our assembler shows that a genome can be accurately assembled by repeat characterization using repeat graphs. This information can also help in improving existing assemblies. With the presented algorithm, a possibility is provided to improve the de novo assembly of a genome.</p>
-<h1 id="background">Background</h1>
-<ul>
-<li>SD</li>
-</ul>
-<figure>
-<img src="images/sd.png" style="width:100.0%" alt="Figure 1: How segmental duplications arise" /><figcaption aria-hidden="true">Figure 1: How segmental duplications arise</figcaption>
-</figure>
-<ul>
-<li>assembly graph is tangled if SD/mosaic repeats are assembled</li>
-</ul>
-<center>
-<img src="images/tangled.png" style="width:60.0%" />
-</center>
-<ul>
-<li>small differences between repeat copies are harder to resolve using error prone-reads</li>
-</ul>
-<h1 id="forschungsfrageaim">Forschungsfrage/Aim</h1>
-<ul>
-<li><p>generate an algorithm, which is able to:</p>
-<ul>
-<li><p>resolve repeating regions</p></li>
-<li><p>assemble the long error-prone reads correctly</p></li>
-<li><p>create contiguous assemblies</p></li>
-</ul></li>
-</ul>
+<p><code>{r setup, include=FALSE} knitr::opts_chunk$set(echo = FALSE)</code></p>
+<h1 id="introduction">Introduction</h1>
+<p>Welcome to <code>posterdown</code> ! This is my attempt to provide a semi-smooth workflow for those who wish to take their R Markdown skills to the conference world. Most features from R Markdown are available in this package such as Markdown section notation, figure captioning, and even citations like this one <span class="citation" data-cites="R-rmarkdown">[@R-rmarkdown]</span>. The rest of this example poster will show how you can insert typical conference poster features into your own document.</p>
+<h2 id="objectives">Objectives</h2>
+<ol type="1">
+<li>Easy to use reproducible poster design.</li>
+<li>Integration with R Markdown.</li>
+<li>Easy transition from <code>posterdown</code> to <code>pagedown</code> report or manuscript documents <span class="citation" data-cites="R-pagedown">[@R-pagedown]</span>.</li>
+</ol>
 <h1 id="methods">Methods</h1>
-<p><img src="images/figure_poster.png" style="width:100.0%" /></p>
+<p>This package uses the same workflow approach as the R Markdown you know and love. Basically it goes from RMarkdown &gt; Knitr &gt; Markdown &gt; Pandoc &gt; HTML/CSS &gt; PDF. You can even use the bibliography the same way <span class="citation" data-cites="R-posterdown">[@R-posterdown]</span>.</p>
 <h1 id="results">Results</h1>
-<p><img src="images/contigity.png" style="width:100.0%" /></p>
+<p>Usually you want to have a nice table displaying some important results that you have calculated. In <code>posterdown</code> this is as easy as using the <code>kable</code> table formatting you are probably use to as per typical R Markdown formatting.</p>
+<p>You can reference tables like so: Table @ref(tab:mytable). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat augue at velit tincidunt semper. Donec elementum porta posuere. Nullam interdum, odio at tincidunt feugiat, turpis nisi blandit eros, eu posuere risus felis non quam. Nam eget lorem odio. Duis et aliquet orci. Phasellus nec viverra est.</p>
+<p><code>{r mytable, out.width='80%'} knitr::kable(iris[1:10, 1:4], caption = 'Table caption.',align = 'c',"html")</code></p>
+<p>Or with figures: Figure @ref(fig:standard-plot), or Figure @ref(fig:morefigs).</p>
+<p><code>{r standard-plot, out.width='80%', fig.align='center', fig.cap='Great figure!', fig.height=5} plot(mtcars[1:2])</code></p>
+<p>```{r morefigs, out.width=‘80%’, echo=TRUE, fig.cap=‘Amazing, right?!’, fig.height=5} data &lt;- iris</p>
+<p>plot(x = data<span class="math inline"><em>S</em><em>e</em><em>p</em><em>a</em><em>l</em>.<em>L</em><em>e</em><em>n</em><em>g</em><em>t</em><em>h</em>, <em>y</em> = <em>d</em><em>a</em><em>t</em><em>a</em></span>Sepal.Width, col = data$Species, pch = 19, xlab = “Sepal Length (cm)”, ylab = “Sepal Width (cm)”)</p>
+<pre><code>
+# Next Steps
+
+Aliquam sed faucibus risus, quis efficitur erat. Vestibulum semper mauris quis tempus eleifend. Aliquam sagittis dictum ipsum, quis viverra ligula eleifend ut. Curabitur sagittis vitae arcu eget faucibus. In non elementum felis. Duis et aliquam nunc. Nunc pulvinar sapien nunc, vel pretium nisi efficitur in. Fusce fringilla maximus leo et maximus. Fusce at ligula laoreet, iaculis mi at, auctor odio. Praesent sed elementum justo. Aenean consectetur risus rhoncus tincidunt efficitur. Praesent dictum mauris at diam maximus maximus [@R-posterdown].
+
+# Conclusion
+
+Try `posterdown` out! Hopefully you like it!
+
+```{r, include=FALSE}
+knitr::write_bib(c(&#39;knitr&#39;,&#39;rmarkdown&#39;,&#39;posterdown&#39;,&#39;pagedown&#39;), &#39;packages.bib&#39;)</code></pre>
 <h1 id="references">References</h1>
 </div>
 </div>
