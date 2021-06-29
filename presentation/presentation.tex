@@ -1,6 +1,7 @@
 \documentclass{beamer}
 \usetheme{metropolis}           % Use metropolis theme
-\title{Assembly of long, error-pront reads using repeat graphs}
+\usepackage{caption}
+\title{Assembly of long, error-prone reads using repeat graphs}
 \date{\today}
 \author{Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, and Pavel A. Pevzner}
 \institute{Johannes Hausmann, Luis Kress}
@@ -10,17 +11,22 @@
   
   %\section{First Section}
   
-  \begin{frame}{Genome assembly in general}
+  \begin{frame}{Background}
     \begin{itemize}[<+- | alert@+>]
-      \item reconstruct target sequence from the reads
+      \item Assembly: reconstruct target sequence from the reads
 
-      \item different graph structures (De-Bruijn, Overlap-layout, String)
+      \item Different assemblers, different graph structures (De-Bruijn, Overlap-layout, String)
 
-      \item repeats $\rightarrow$ assembly fragmentation
+      \item Repeats $\rightarrow$ assembly fragmentation
+      \begin{figure}
+        \includegraphics[width=3cm]{images/tangled.png}
+        \caption{Tangled assembly graph}
+        \label{fig:tangled}
+      \end{figure}
 
-      \item error rate long read $\leftrightarrow$ short read
+      \item Error rate long read $\leftrightarrow$ short read
 
-      \item Flye should resolve these repeats correctly
+      \item Flye $\rightarrow$ resolve these repeats correctly
     \end{itemize}
   \end{frame}
 
@@ -28,56 +34,58 @@
 
   \begin{frame}{Disjointigs}
     \begin{itemize}[<+- | alert@+>]
-      \item most assemblers spent much time on correct contig assembly
+      \item Most assemblers spend much time on correct contig assembly
 
       \item Flye uses a different approach \cite{kolmogorov_assembly_2019}:
       
       \begin{itemize}[<+- | alert@+>]
-        \item we don't care (at least at the initial stage)
+        \item we don't care \only<4>{(at least at the initial stage)}
+        \begin{figure}
+          \captionsetup{labelformat=empty}
+          \includegraphics[width=3cm]{images/orly-owl.jpg}
+          %\caption{Orly}
+          \label{fig:orly}
+        \end{figure}
         
-        \item correct assembly graph 
+      %  \item correct assembly graph 
       \end{itemize}
 
-      \item generate paths from overlapping reads without checking for correct assembly $\rightarrow$ disjointigs
+      \item Generate paths from overlapping reads without checking for correct repeat resolution $\rightarrow$ Disjointigs
     \end{itemize}
   \end{frame}
 
   \begin{frame}{Repeat Graph Creation}
     \begin{figure}
-      \includegraphics[width=11cm]{images/genome.png}
-      \caption{Example Genome}
-      \label{fig:genome}
-    \end{figure}
-  \end{frame}
-
-  \begin{frame}{Repeat Graph Creation}
-    \begin{figure}
+      \captionsetup{labelformat=empty}
       \includegraphics[width=11cm]{images/genome_and_reads.png}
-      \caption{Example Genome and Reads}
+      %\caption{Example Genome and Reads}
       \label{fig:genome_and_reads}
     \end{figure}
   \end{frame}
 
   \begin{frame}{Repeat Graph Creation}
     \begin{figure}
+      \captionsetup{labelformat=empty}
       \includegraphics[width=11cm]{images/disjointigs.png}
-      \caption{Example Genome, Reads and Disjointigs}
+      %\caption{Example Genome, Reads and Disjointigs}
       \label{fig:disjointigs}
     \end{figure}
   \end{frame}
 
   \begin{frame}{Repeat Graph Creation}
     \begin{figure}
+      \captionsetup{labelformat=empty}
       \includegraphics[width=6cm]{images/dot_plot.png}
-      \caption{Breakpoint Graph}
+      %\caption{Breakpoint Graph}
       \label{fig:bp_graph}
     \end{figure}
   \end{frame}
 
   \begin{frame}{Repeat Graph Creation}
     \begin{figure}
+      \captionsetup{labelformat=empty}
       \includegraphics[width=11cm]{images/plot_to_repeat_graph.png}
-      \caption{Repeat Graph}
+      %\caption{Repeat Graph}
       \label{fig:repeat_graph}
     \end{figure}
   \end{frame}
@@ -100,11 +108,12 @@
   
   \end{frame}
 
-  \begin{frame}{Git (presentation)}
+  \begin{frame}{Git (presentation and poster)}
 
     \begin{figure}
+      \captionsetup{labelformat=empty}
       \includegraphics[width=6cm]{images/qr-code.png}
-      \caption{Link to our git repo}
+      %\caption{Link to our git repo}
       \label{fig:qr}
     \end{figure}
   
@@ -116,21 +125,21 @@
 
   \begin{frame}{Dot plot creation}
     \begin{figure}
-      \includegraphics[width=6cm]{images/dot_plot_creation.png}
+      \includegraphics[width=11cm]{images/dot_plot_creation.png}
       \caption{Dot plot creation}
       \label{fig:dotp_creation}
     \end{figure}
   \end{frame}
 
   \begin{frame}{Repeat graphs}
-    \begin{itemize}[<+- | alert@+>]
+    \begin{itemize}
       \item generalization of de bruijn graphs
 
       \item structure
 
       \item creation
       
-      \begin{itemize}[<+- | alert@+>]
+      \begin{itemize}
 
         \item from disjointigs = random walk of reads on the repeat graph 
       
@@ -140,7 +149,7 @@
   \end{frame}
 
   \begin{frame}{Difference repeat graph de Bruijn graph}
-    \begin{itemize}[<+- | alert@+>]
+    \begin{itemize}
       \item A-Bruijn graph (alignments) generalizes the de Bruijn graph
 
       \item We thus argue that the time has come to explain that the breakpoint graphs and the de Bruijn graphs are two identical data structures (if one ignores a cosmetic difference between them) as they both represent specific instances of a general notion of the A-Bruijn graph introduced in [13]. The A-Bruijn graphs are based on representing genomes as sets of labeled paths and further gluing identically labeled edges (breakpoint graphs) or vertices (de Bruijn graphs) in the resulting paths.
@@ -157,7 +166,7 @@
       \caption{Segmental Duplications}
       \label{fig:SD}
     \end{figure}
-    \begin{itemize}[<+- | alert@+>]
+    \begin{itemize}
       \item Segmental duplications are duplicated blocks of genomic DNA typically ranging in size from 1-200 kb (IHGSC 2001)
 
       \item They often contain sequence features such as high-copy repeats and gene sequences with intron-exon structure. 
@@ -171,10 +180,9 @@
       \caption{Contigity improvements}
       \label{fig:contig_improvements}
     \end{figure}
-    \begin{itemize}[<+- | alert@+>]
+    \begin{itemize}
       \item colors are contigs
 
-      \item colors are contigs
     \end{itemize}
     %From: 
     %https://www.youtube.com/watch?v=z6elrX-ZzW8&t=636s
@@ -183,14 +191,12 @@
 
   \begin{frame}{Contigity improvement}
     \begin{figure}
-      \includegraphics[width=6cm]{images/contigity_improvement.png}
+      \includegraphics[width=11cm]{images/contigity_improvement.png}
       \caption{Contigity improvements}
       \label{fig:contig_improvements}
     \end{figure}
-    \begin{itemize}[<+- | alert@+>]
-      \item colors are contigs
-
-      \item colors are contigs
+    \begin{itemize}
+      \item colors are contigs $\rightarrow$ change in color means fragmentation
     \end{itemize}
   \end{frame}
 
