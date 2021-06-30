@@ -6,8 +6,8 @@ plot:
 
 ppt:
 	@echo 'Creating powerpoint...'
-	@pandoc --pdf-engine="xelatex" -t beamer presentation/presentation.md -o presentation/presentation.pdf --template presentation/pandoc-latex-template/eisvogel.tex
-
+	@./scripts/run_tex.sh
+	
 post:
 	@echo 'Creating poster...'
 	@pandoc -s --template poster/template/template.html -f markdown -t html poster/poster.md -o poster/poster.html

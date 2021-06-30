@@ -1,10 +1,27 @@
 \documentclass{beamer}
 \usetheme{metropolis}           % Use metropolis theme
+\definecolor{goethe_blau}{HTML}{00618F} % define goethe color
+%\setbeamercolor{frametitle}{bg=goethe_blau}
+\setbeamercolor{alerted text}{fg=goethe_blau} % use goethe color
+
+
+%\usepackage[
+%    backend=biber,
+%    style=apa,
+%  ]{biblatex}
+%\addbibresource{presentation/bibliography.bib}
+
+\titlegraphic{\includegraphics[width=2.5cm]{presentation/images/GoetheLogo.png}}
+
+%\logo{{\includegraphics[width=2cm]{presentation/images/GoetheLogo.png}}\hspace*{1cm}}
+
 \usepackage{caption}
+
 \title{Assembly of long, error-prone reads using repeat graphs}
 \date{\today}
 \author{Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, and Pavel A. Pevzner}
 \institute{Johannes Hausmann, Luis Kress}
+
 
 \begin{document}
   \maketitle
@@ -19,14 +36,14 @@
 
       \item Repeats $\rightarrow$ assembly fragmentation
       \begin{figure}
-        \includegraphics[width=3cm]{images/tangled.png}
-        \caption{Tangled assembly graph}
+        \includegraphics[width=3cm]{presentation/images/tangled.png}
+        \caption{Figure 1: Tangled assembly graph\cite{kolmogorov_assembly_2019}}
         \label{fig:tangled}
       \end{figure}
 
       \item Error rate long read $\leftrightarrow$ short read
 
-      \item Flye $\rightarrow$ resolve these repeats correctly
+      \item Flye $\rightarrow$ resolve these repeats correctly, create contiguous assemblies
     \end{itemize}
   \end{frame}
 
@@ -41,8 +58,8 @@
       \begin{itemize}[<+- | alert@+>]
         \item we don't care \only<4>{(at least at the initial stage)}
         \begin{figure}
-          \captionsetup{labelformat=empty}
-          \includegraphics[width=3cm]{images/orly-owl.jpg}
+          %\captionsetup{labelformat=empty}
+          \includegraphics[width=2.5cm]{presentation/images/orly-owl.jpg}
           %\caption{Orly}
           \label{fig:orly}
         \end{figure}
@@ -56,8 +73,8 @@
 
   \begin{frame}{Repeat Graph Creation}
     \begin{figure}
-      \captionsetup{labelformat=empty}
-      \includegraphics[width=11cm]{images/genome_and_reads.png}
+      %\captionsetup{labelformat=empty}
+      \includegraphics[width=11cm]{presentation/images/genome_and_reads.png}
       %\caption{Example Genome and Reads}
       \label{fig:genome_and_reads}
     \end{figure}
@@ -65,8 +82,8 @@
 
   \begin{frame}{Repeat Graph Creation}
     \begin{figure}
-      \captionsetup{labelformat=empty}
-      \includegraphics[width=11cm]{images/disjointigs.png}
+      %\captionsetup{labelformat=empty}
+      \includegraphics[width=11cm]{presentation/images/disjointigs.png}
       %\caption{Example Genome, Reads and Disjointigs}
       \label{fig:disjointigs}
     \end{figure}
@@ -74,8 +91,8 @@
 
   \begin{frame}{Repeat Graph Creation}
     \begin{figure}
-      \captionsetup{labelformat=empty}
-      \includegraphics[width=6cm]{images/dot_plot.png}
+      %\captionsetup{labelformat=empty}
+      \includegraphics[width=6cm]{presentation/images/dot_plot.png}
       %\caption{Breakpoint Graph}
       \label{fig:bp_graph}
     \end{figure}
@@ -83,8 +100,8 @@
 
   \begin{frame}{Repeat Graph Creation}
     \begin{figure}
-      \captionsetup{labelformat=empty}
-      \includegraphics[width=11cm]{images/plot_to_repeat_graph.png}
+      %\captionsetup{labelformat=empty}
+      \includegraphics[width=11cm]{presentation/images/plot_to_repeat_graph.png}
       %\caption{Repeat Graph}
       \label{fig:repeat_graph}
     \end{figure}
@@ -92,7 +109,7 @@
 
   \begin{frame}{Results}
     \begin{figure}
-      \includegraphics[width=10cm]{images/results_HUMAN.png}
+      \includegraphics[width=11cm]{presentation/images/results_HUMAN.png}
       \caption{Results for HUMAN testset}
       \label{fig:results}
     \end{figure}
@@ -102,8 +119,13 @@
 
 
   \begin{frame}[allowframebreaks]{References}
-
-    \bibliography{bibliography}
+    %\begin{small} 
+    %  dir: \thepwd
+    %\end{small}}
+    %{\small dir: \thepwd \par}
+    
+    %\printbibliography
+    \bibliography{literature/bibliography.bib}
     \bibliographystyle{abbrv}
   
   \end{frame}
@@ -111,8 +133,8 @@
   \begin{frame}{Git (presentation and poster)}
 
     \begin{figure}
-      \captionsetup{labelformat=empty}
-      \includegraphics[width=6cm]{images/qr-code.png}
+      %\captionsetup{labelformat=empty}
+      \includegraphics[width=6cm]{presentation/images/qr-code.png}
       %\caption{Link to our git repo}
       \label{fig:qr}
     \end{figure}
@@ -125,7 +147,7 @@
 
   \begin{frame}{Dot plot creation}
     \begin{figure}
-      \includegraphics[width=11cm]{images/dot_plot_creation.png}
+      \includegraphics[width=11cm]{presentation/images/dot_plot_creation.png}
       \caption{Dot plot creation}
       \label{fig:dotp_creation}
     \end{figure}
@@ -162,7 +184,7 @@
 
   \begin{frame}{Segmental duplications}
     \begin{figure}
-      \includegraphics[width=6cm]{images/SDs.png}
+      \includegraphics[width=6cm]{presentation/images/SDs.png}
       \caption{Segmental Duplications}
       \label{fig:SD}
     \end{figure}
@@ -173,31 +195,18 @@
     \end{itemize}
   \end{frame}
 
-
   \begin{frame}{Contigity improvement}
     \begin{figure}
-      \includegraphics[width=6cm]{images/contigity_improvement.png}
-      \caption{Contigity improvements}
-      \label{fig:contig_improvements}
-    \end{figure}
-    \begin{itemize}
-      \item colors are contigs
-
-    \end{itemize}
-    %From: 
-    %https://www.youtube.com/watch?v=z6elrX-ZzW8&t=636s
-    %(Youtube nanopore talk)
-  \end{frame}
-
-  \begin{frame}{Contigity improvement}
-    \begin{figure}
-      \includegraphics[width=11cm]{images/contigity_improvement.png}
+      \includegraphics[width=11cm]{presentation/images/contigity_improvement.png}
       \caption{Contigity improvements}
       \label{fig:contig_improvements}
     \end{figure}
     \begin{itemize}
       \item colors are contigs $\rightarrow$ change in color means fragmentation
     \end{itemize}
+    %From: 
+    %https://www.youtube.com/watch?v=z6elrX-ZzW8&t=636s
+    %(Youtube nanopore talk)
   \end{frame}
 
 
