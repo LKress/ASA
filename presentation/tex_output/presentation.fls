@@ -410,6 +410,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT presentation/images/qr-code.png
 INPUT ./presentation/images/qr-code.png
 INPUT ./presentation/images/qr-code.png
+INPUT presentation/images/GoetheLogo.png
+INPUT ./presentation/images/GoetheLogo.png
 INPUT presentation/images/dot_plot_creation.png
 INPUT ./presentation/images/dot_plot_creation.png
 INPUT ./presentation/images/dot_plot_creation.png
