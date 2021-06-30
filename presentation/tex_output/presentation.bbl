@@ -5,4 +5,16 @@ M.~Kolmogorov, J.~Yuan, Y.~Lin, and P.~A. Pevzner.
 \newblock Assembly of long, error-prone reads using repeat graphs.
 \newblock {\em Nature Biotechnology}, 37(5):540--546, May 2019.
 
+\bibitem{pevzner_novo_2004}
+P.~A. Pevzner, P.~A. Pevzner, H.~Tang, and G.~Tesler.
+\newblock De novo repeat classification and fragment assembly.
+\newblock {\em Genome Research}, 14(9):1786--1796, Sept. 2004.
+
+\bibitem{walker_pilon_2014}
+B.~J. Walker, T.~Abeel, T.~Shea, M.~Priest, A.~Abouelliel, S.~Sakthikumar,
+  C.~A. Cuomo, Q.~Zeng, J.~Wortman, S.~K. Young, and A.~M. Earl.
+\newblock Pilon: an integrated tool for comprehensive microbial variant
+  detection and genome assembly improvement.
+\newblock {\em PloS One}, 9(11):e112963, 2014.
+
 \end{thebibliography}
