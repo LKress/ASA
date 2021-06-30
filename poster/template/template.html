@@ -72,7 +72,7 @@ $endif$;
 }
 .logo_left {
 float: left;
-width: 10%;
+width: 15%;
 height: 100%;
 background-color: $if(primary_colour)$$primary_colour$$else$#0b4545$endif$;
 display: flex;
@@ -81,7 +81,7 @@ justify-content: center;
 }
 .logo_right {
 float: right;
-width: 10%;
+width: 15%;
 height: 100%;
 background-color: $if(primary_colour)$$primary_colour$$else$#0b4545$endif$;
 display: flex;
@@ -92,10 +92,10 @@ justify-content: center;
 text-align: center;
 position: relative;
 float: left;
-width: 80%;
+width: 70%;
 height: 100%;
 color: $if(title_textcol)$$title_textcol$$else$#FFFFFF$endif$;
-top: 50%;
+top: 60%;
 transform: translateY(-50%);
 -webkit-transform: translateY(-50%);
 }
@@ -324,7 +324,7 @@ $endfor$
 <!-- Left Logo  -->
 <div class="logo_left">
 $if(logoleft_name)$
-<img src=$logoleft_name$ style="width: 80%">
+<img src=$logoleft_name$ style="width: 65%">
 $endif$
 </div>
 <!-- Poster Title -->
@@ -336,7 +336,7 @@ $if(affiliation)$<h5 id="affiliation">$for(affiliation)$<sup>$affiliation.num$</
 <!-- Right Logo  -->
 <div class="logo_right">
 $if(logoright_name)$
-<img src=$logoright_name$ style="width: 80%">
+<img src=$logoright_name$ style="width: 50%">
 $endif$
 </div>
 </div>

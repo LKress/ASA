@@ -6,11 +6,12 @@ affiliation:
   - num: 
     address: Johannes Hausmann, Luis Kress
 
-titletext_fontfamily: Fira Sans
-font_family: Palatino
+
+
 
 column_numbers: 3
-logoleft_name: images/GoetheLogo.png
+logoleft_name: images/Goethe-Logo.svg
+logoright_name: images/qr-code.png
 
 primary_colour: "#88c0d0"
 secondary_colour: "#00628f"
@@ -34,6 +35,8 @@ poster_width: 844mm
 poster_height: 1192mm
 ---
 
+<!--titletext_fontfamily: Fira Sans-->
+
 # Abstract
 
 With the emergence and the spreading adoption of long-read technologies, the assembly
@@ -43,29 +46,36 @@ possibility is provided to improve the de novo assembly of a genome.
 
 # Background
 
-* SD
+* Different assemblers, different graph structures (De-Bruijn, Overlap-layout, String)
 
 
-![Figure 1: How segmental duplications arise](images/sd.png){ width=100% }
+* Segmental duplications (SD)
 
 
-* assembly graph is tangled if SD/mosaic repeats are assembled
+![<font size="-0.5">Figure 1: How segmental duplications arise (modified from (CITE))</font>](images/sd.png){ width=100% }
 
-<center>
-![](images/tangled.png){ width=60% }
-</center>
 
-* small differences between repeat copies are harder to resolve using error prone-reads
+* Assembly graph is tangled if SD/mosaic repeats are present $\rightarrow$ fragmentation
 
-# Forschungsfrage/Aim
+
+<figure>
+  <img align="center" src="images/tangled.png" width="60%">
+  <figcaption>Figure 2: Tangled assembly graph from <i>E.coli</i> [1]</figcaption>
+</figure>
+
+* Small differences between repeat copies are harder to resolve using error prone-reads
+
+
+# Aim
 
 * generate an algorithm, which is able to:
     
     * resolve repeating regions
 
     * assemble the long error-prone reads correctly
-
+<!--
     * create contiguous assemblies
+-->
 
 # Methods
 
@@ -75,7 +85,24 @@ possibility is provided to improve the de novo assembly of a genome.
 
 # Results
 
-![](images/contigity.png){ width=100% }
+
+![](images/results_HUMAN.png){width=100%}
+
+![](images/contiguity18.png){width=49%}
+![](images/contiguity20.png){width=49%}
+Figure 3: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs.
+
+
+
 
 # References
 
+1. Kolmogorov, M., Yuan, J., Lin, Y., & Pevzner, P. A. (2019). Assembly of long, error-prone reads using repeat graphs. <i>Nature Biotechnology, 37(5),</i> 540-546. https://doi.org/10.1038/s41587-019-0072-8
+
+2. Pevzner, P. A., Pevzner, P. A., Tang, H., & Tesler, G. (2004). De novo repeat classification and fragment assembly. <i>Genome Research, 14(9),</i> 1786-1796. https://doi.org/10.1101/gr.2395204
+
+3. Nachname, Vorname(n) (Erscheinungsjahr). Titel. Name der
+Zeitschrift, Jahrgang(Ausgabe), Seitenzahlen.
+Heruntergeladen von URL
+
+4. Lin, Y., Yuan, J., Kolmogorov, M., Shen, M. W., Chaisson, M., & Pevzner, P. A. (2016). Assembly of long error-prone reads using de Bruijn graphs. <i>Proceedings of the National Academy of Sciences, 113(52),</i> E8396-E8405. https://doi.org/10.1073/pnas.1604560113
