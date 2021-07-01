@@ -16,6 +16,8 @@ Font-awesome icons ie github or twitter
 <!--
 Google fonts api stuff
 -->
+<link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet'>
 
 
 
@@ -38,7 +40,7 @@ width: 844mm;
 height: 1192mm;
 padding: 0;
 text-align: justify;
-font-family: Palatino;
+font-family: Roboto Condensed;
 }
 .poster_wrap {
 width: 844mm;
@@ -82,7 +84,7 @@ transform: translateY(-50%);
 -webkit-transform: translateY(-50%);
 }
 #title {
-font-family: Palatino;
+font-family: Roboto+Condensed;
 }
 /* unvisited link */
 a:link {
@@ -315,16 +317,15 @@ font-size: 20pt;
 
 <div class='poster_body_wrap'>
 <div class='poster_body'>
-<!--titletext_fontfamily: Fira Sans-->
 <h1 id="abstract">Abstract</h1>
 <p>With the emergence and the spreading adoption of long-read technologies, the assembly of genomes has improved, which may also become the “gold-standard” for de novo assemblies. Current long read sequencing techniques still have high error rates which makes it more difficult to align these reads. Up to date long read assemblers are still not able to resolve all repeating regions correctly. Especially segmental duplications, long and highly homologous sequences resulted from duplications, are still problematic to resolve correctly. While genomic repeats can be better resolved using long reads, assembly with them is still challenging and not straightforward due to their error-prone nature. Here we present Flye a de novo assembler for long-error prone reads, by creating a precise repeat graph, built in a new manner using so called disjointigs. Flye could achive two times better contiguity for the assembly of a human Oxford Nanopore test dataset in combination with short read Illumina data in contrast to the state of the art assembler Canu. In the created repeat graph many segmental duplications are represented from which the simple ones are already resolved by the algorithm. Our assembler shows that a genome can be accurately assembled by repeat characterization using repeat graphs. This information can also help in improving existing assemblies. With the presented algorithm, a possibility is provided to improve the de novo assembly of a genome.</p>
 <h1 id="background">Background</h1>
 <ul>
-<li><p>Different assemblers, different graph structures (De-Bruijn, Overlap-layout, String)</p></li>
-<li><p>Segmental duplications (SD)</p></li>
+<li><p>Different assemblers, different graph structures</p></li>
+<li><p>repeat characterization problem</p></li>
 </ul>
 <figure>
-<img src="images/sd.png" style="width:100.0%" alt="Figure 1: How segmental duplications arise (modified from (CITE))" /><figcaption aria-hidden="true"><font size="-0.5">Figure 1: How segmental duplications arise (modified from (CITE))</font></figcaption>
+<img src="images/sd.png" style="width:100.0%" alt="Figure 1: How mosaic-like repeats arise (modified from ([2]))" /><figcaption aria-hidden="true"><font size="0.25">Figure 1: How mosaic-like repeats arise (modified from ([2]))</font></figcaption>
 </figure>
 <ul>
 <li>Assembly graph is tangled if SD/mosaic repeats are present <span class="math inline">→</span> fragmentation</li>
@@ -336,13 +337,13 @@ Figure 2: Tangled assembly graph from <i>E.coli</i> [1]
 </figcaption>
 </figure>
 <ul>
-<li>Small differences between repeat copies are harder to resolve using error prone-reads</li>
+<li>Small differences between repeat copies → hard to resolve</li>
 </ul>
 <h1 id="aim">Aim</h1>
 <ul>
 <li><p>generate an algorithm, which is able to:</p>
 <ul>
-<li><p>resolve repeating regions</p></li>
+<li><p>resolve repetetive regions</p></li>
 <li><p>assemble the long error-prone reads correctly <!--
   * create contiguous assemblies
 --></p></li>
@@ -351,14 +352,22 @@ Figure 2: Tangled assembly graph from <i>E.coli</i> [1]
 <h1 id="methods">Methods</h1>
 <p><img src="images/figure_poster.png" style="width:100.0%" /></p>
 <h1 id="results">Results</h1>
-<p><img src="images/results_HUMAN.png" style="width:100.0%" /></p>
-<p><img src="images/contiguity18.png" style="width:49.0%" /> <img src="images/contiguity20.png" style="width:49.0%" /> Figure 3: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs.</p>
+<figure>
+<img src="images/results_HUMAN.png" style="width:100.0%" alt="Figure 4: Results of benchmark dataset in comparison to other assemblers (data from [1])" /><figcaption aria-hidden="true">Figure 4: Results of benchmark dataset in comparison to other assemblers (data from [1])</figcaption>
+</figure>
+<p><img src="images/contiguity18.png" style="width:49.0%" /> <img src="images/contiguity20.png" style="width:49.0%" /> Figure 5: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs (personal communication with Mikhail Kolmogorov).</p>
+<h1 id="acknowledgement">Acknowledgement</h1>
+<p>We would like to thank Mikhail Kolmogorov for providing us high quality figures and answering our questions in a quick and uncomplicated manner.</p>
 <h1 id="references">References</h1>
 <ol type="1">
 <li><p>Kolmogorov, M., Yuan, J., Lin, Y., &amp; Pevzner, P. A. (2019). Assembly of long, error-prone reads using repeat graphs. <i>Nature Biotechnology, 37(5),</i> 540-546. https://doi.org/10.1038/s41587-019-0072-8</p></li>
 <li><p>Pevzner, P. A., Pevzner, P. A., Tang, H., &amp; Tesler, G. (2004). De novo repeat classification and fragment assembly. <i>Genome Research, 14(9),</i> 1786-1796. https://doi.org/10.1101/gr.2395204</p></li>
-<li><p>Nachname, Vorname(n) (Erscheinungsjahr). Titel. Name der Zeitschrift, Jahrgang(Ausgabe), Seitenzahlen. Heruntergeladen von URL</p></li>
-<li><p>Lin, Y., Yuan, J., Kolmogorov, M., Shen, M. W., Chaisson, M., &amp; Pevzner, P. A. (2016). Assembly of long error-prone reads using de Bruijn graphs. <i>Proceedings of the National Academy of Sciences, 113(52),</i> E8396-E8405. https://doi.org/10.1073/pnas.1604560113</p></li>
+</ol>
+<!--3. Nachname, Vorname(n) (Erscheinungsjahr). Titel. Name der
+Zeitschrift, Jahrgang(Ausgabe), Seitenzahlen.
+Heruntergeladen von URL-->
+<ol start="3" type="1">
+<li>Lin, Y., Yuan, J., Kolmogorov, M., Shen, M. W., Chaisson, M., &amp; Pevzner, P. A. (2016). Assembly of long error-prone reads using de Bruijn graphs. <i>Proceedings of the National Academy of Sciences, 113(52),</i> E8396-E8405. https://doi.org/10.1073/pnas.1604560113</li>
 </ol>
 </div>
 </div>

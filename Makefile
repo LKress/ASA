@@ -11,7 +11,7 @@ ppt:
 post:
 	@echo 'Creating poster...'
 	@pandoc -s --template poster/template/template.html -f markdown -t html poster/poster.md -o poster/poster.html
-	@brave --headless --disable-gpu -print-to-pdf=poster/poster.pdf  poster/poster.html
+	@brave --headless --virtual-time-budget=10000 --disable-gpu -print-to-pdf=poster/poster.pdf  poster/poster.html
 
 clean:
 	@echo 'Removing plots, ppt & poster'

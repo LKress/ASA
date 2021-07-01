@@ -33,10 +33,10 @@ sectitle_borderwidth: 0
 
 poster_width: 844mm
 poster_height: 1192mm
+
+titletext_fontfamily: Roboto+Condensed
+font_family: Roboto Condensed
 ---
-
-<!--titletext_fontfamily: Fira Sans-->
-
 # Abstract
 
 With the emergence and the spreading adoption of long-read technologies, the assembly
@@ -46,13 +46,13 @@ possibility is provided to improve the de novo assembly of a genome.
 
 # Background
 
-* Different assemblers, different graph structures (De-Bruijn, Overlap-layout, String)
+* Different assemblers, different graph structures
 
 
-* Segmental duplications (SD)
+* repeat characterization problem
 
 
-![<font size="-0.5">Figure 1: How segmental duplications arise (modified from (CITE))</font>](images/sd.png){ width=100% }
+![<font size="0.25">Figure 1: How mosaic-like repeats arise (modified from ([2]))</font>](images/sd.png){ width=100% }
 
 
 * Assembly graph is tangled if SD/mosaic repeats are present $\rightarrow$ fragmentation
@@ -63,14 +63,14 @@ possibility is provided to improve the de novo assembly of a genome.
   <figcaption>Figure 2: Tangled assembly graph from <i>E.coli</i> [1]</figcaption>
 </figure>
 
-* Small differences between repeat copies are harder to resolve using error prone-reads
+* Small differences between repeat copies → hard to resolve
 
 
 # Aim
 
 * generate an algorithm, which is able to:
     
-    * resolve repeating regions
+    * resolve repetetive regions
 
     * assemble the long error-prone reads correctly
 <!--
@@ -86,13 +86,15 @@ possibility is provided to improve the de novo assembly of a genome.
 # Results
 
 
-![](images/results_HUMAN.png){width=100%}
+![Figure 4: Results of benchmark dataset in comparison to other assemblers (data from [1]) ](images/results_HUMAN.png){width=100%}
 
 ![](images/contiguity18.png){width=49%}
 ![](images/contiguity20.png){width=49%}
-Figure 3: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs.
+Figure 5: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs (personal communication with Mikhail Kolmogorov).
 
+# Acknowledgement
 
+We would like to thank Mikhail Kolmogorov for providing us high quality figures and answering our questions in a quick and uncomplicated manner.
 
 
 # References
@@ -101,8 +103,8 @@ Figure 3: Contiguity comparison for the assembly of the same oxford nanopore hum
 
 2. Pevzner, P. A., Pevzner, P. A., Tang, H., & Tesler, G. (2004). De novo repeat classification and fragment assembly. <i>Genome Research, 14(9),</i> 1786-1796. https://doi.org/10.1101/gr.2395204
 
-3. Nachname, Vorname(n) (Erscheinungsjahr). Titel. Name der
+<!--3. Nachname, Vorname(n) (Erscheinungsjahr). Titel. Name der
 Zeitschrift, Jahrgang(Ausgabe), Seitenzahlen.
-Heruntergeladen von URL
+Heruntergeladen von URL-->
 
-4. Lin, Y., Yuan, J., Kolmogorov, M., Shen, M. W., Chaisson, M., & Pevzner, P. A. (2016). Assembly of long error-prone reads using de Bruijn graphs. <i>Proceedings of the National Academy of Sciences, 113(52),</i> E8396-E8405. https://doi.org/10.1073/pnas.1604560113
+3. Lin, Y., Yuan, J., Kolmogorov, M., Shen, M. W., Chaisson, M., & Pevzner, P. A. (2016). Assembly of long error-prone reads using de Bruijn graphs. <i>Proceedings of the National Academy of Sciences, 113(52),</i> E8396-E8405. https://doi.org/10.1073/pnas.1604560113
