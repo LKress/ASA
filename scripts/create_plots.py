@@ -29,7 +29,7 @@ ref_cov_m = [95.1]
 
 
 # define colors
-red = "#FFA500"#"#bf616a"
+red = "#FF9A66"#"#bf616a"
 grey = "#1E90FF"#"#434c5e"
 light_grey = "#008000"#"#d8dee9"
 

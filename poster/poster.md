@@ -52,16 +52,24 @@ possibility is provided to improve the de novo assembly of a genome.
 * Segmental duplications (SD)
 
 
-![<font size="-0.5">Figure 1: How segmental duplications arise (modified from (CITE))</font>](images/sd.png){ width=100% }
-
+![](images/sd.png){ width=100% }
+<p style="line-height: 80%">
+<font size="6">
+Figure 1: How segmental duplications arise (modified from [2])
+</font>
+</p>
 
 * Assembly graph is tangled if SD/mosaic repeats are present $\rightarrow$ fragmentation
 
+<p align="center">
+![](images/tangled.png){ width=40% }
+</p>
+<p style="line-height: 80%; ">
+<font size="6">
+Figure 2: Tangled assembly graph from <i>E.coli</i> [1]
+</font>
+</p>
 
-<figure>
-  <img align="center" src="images/tangled.png" width="60%">
-  <figcaption>Figure 2: Tangled assembly graph from <i>E.coli</i> [1]</figcaption>
-</figure>
 
 * Small differences between repeat copies are harder to resolve using error prone-reads
 
@@ -80,19 +88,33 @@ possibility is provided to improve the de novo assembly of a genome.
 # Methods
 
 ![](images/figure_poster.png){ width=100% }
-
+<p style="line-height: 80%; ">
+<font size="6">
+Figure 3: Repeat graph creation and repeat resolution (modified from [1])
+</font>
+</p>
 
 
 # Results
 
+* Fly is able to create more contiguous assemblies than other state of the art sequencing algorithms
 
 ![](images/results_HUMAN.png){width=100%}
+<p style="line-height: 80%">
+<font size="6">
+Figure 4: Comparison of Flye assembly against the state of the art assemblers Canu and Masurca. Assembly of a human Oxford Nanopore long read dataset. Comparing the NGA50, reference percentage identity, reference percentage coverage and the number of missassemblies (from left to right). (Own figure from table 1 in [1]) 
+</font>
+</p>
+
+* Refinements of the Flye algorithm lead to improvements in assembly contiguity $\rightarrow$ better results only by algorithmic improvements
 
 ![](images/contiguity18.png){width=49%}
 ![](images/contiguity20.png){width=49%}
-Figure 3: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs.
-
-
+<p style="line-height: 80%">
+<font size="6">
+Figure 5: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs. (M. Kolmogorov, personal communication, June 30, 2021)
+</font>
+</p>
 
 
 # References
@@ -101,8 +123,4 @@ Figure 3: Contiguity comparison for the assembly of the same oxford nanopore hum
 
 2. Pevzner, P. A., Pevzner, P. A., Tang, H., & Tesler, G. (2004). De novo repeat classification and fragment assembly. <i>Genome Research, 14(9),</i> 1786-1796. https://doi.org/10.1101/gr.2395204
 
-3. Nachname, Vorname(n) (Erscheinungsjahr). Titel. Name der
-Zeitschrift, Jahrgang(Ausgabe), Seitenzahlen.
-Heruntergeladen von URL
-
-4. Lin, Y., Yuan, J., Kolmogorov, M., Shen, M. W., Chaisson, M., & Pevzner, P. A. (2016). Assembly of long error-prone reads using de Bruijn graphs. <i>Proceedings of the National Academy of Sciences, 113(52),</i> E8396-E8405. https://doi.org/10.1073/pnas.1604560113
+3. Lin, Y., Yuan, J., Kolmogorov, M., Shen, M. W., Chaisson, M., & Pevzner, P. A. (2016). Assembly of long error-prone reads using de Bruijn graphs. <i>Proceedings of the National Academy of Sciences, 113(52),</i> E8396-E8405. https://doi.org/10.1073/pnas.1604560113
