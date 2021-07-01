@@ -33,10 +33,10 @@ sectitle_borderwidth: 0
 
 poster_width: 844mm
 poster_height: 1192mm
+
+titletext_fontfamily: Roboto+Condensed
+font_family: Roboto Condensed
 ---
-
-<!--titletext_fontfamily: Fira Sans-->
-
 # Abstract
 
 With the emergence and the spreading adoption of long-read technologies, the assembly
@@ -46,11 +46,10 @@ possibility is provided to improve the de novo assembly of a genome.
 
 # Background
 
-* Different assemblers, different graph structures (De-Bruijn, Overlap-layout, String)
+* Different assemblers, different graph structures
 
 
-* Segmental duplications (SD)
-
+* repeat characterization problem
 
 ![](images/sd.png){ width=100% }
 <p style="line-height: 80%">
@@ -58,6 +57,7 @@ possibility is provided to improve the de novo assembly of a genome.
 Figure 1: How segmental duplications arise (modified from [2])
 </font>
 </p>
+
 
 * Assembly graph is tangled if SD/mosaic repeats are present $\rightarrow$ fragmentation
 
@@ -71,14 +71,14 @@ Figure 2: Tangled assembly graph from <i>E.coli</i> [1]
 </p>
 
 
-* Small differences between repeat copies are harder to resolve using error prone-reads
+* Small differences between repeat copies → hard to resolve
 
 
 # Aim
 
 * generate an algorithm, which is able to:
     
-    * resolve repeating regions
+    * resolve repetetive regions
 
     * assemble the long error-prone reads correctly
 <!--
@@ -99,6 +99,7 @@ Figure 3: Repeat graph creation and repeat resolution (modified from [1])
 
 * Fly is able to create more contiguous assemblies than other state of the art sequencing algorithms
 
+
 ![](images/results_HUMAN.png){width=100%}
 <p style="line-height: 80%">
 <font size="6">
@@ -115,6 +116,11 @@ Figure 4: Comparison of Flye assembly against the state of the art assemblers Ca
 Figure 5: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs. (M. Kolmogorov, personal communication, June 30, 2021)
 </font>
 </p>
+
+# Acknowledgement
+
+We would like to thank Mikhail Kolmogorov for providing us high quality figures and answering our questions in a quick and uncomplicated manner.
+
 
 
 # References
