@@ -323,18 +323,19 @@ font-size: 20pt;
 <li><p>Different assemblers, different graph structures (De-Bruijn, Overlap-layout, String)</p></li>
 <li><p>Segmental duplications (SD)</p></li>
 </ul>
-<figure>
-<img src="images/sd.png" style="width:100.0%" alt="Figure 1: How segmental duplications arise (modified from (CITE))" /><figcaption aria-hidden="true"><font size="-0.5">Figure 1: How segmental duplications arise (modified from (CITE))</font></figcaption>
-</figure>
+<img src="images/sd.png" style="width:100.0%" />
+<p style="line-height: 80%">
+<font size="6"> Figure 1: How segmental duplications arise (modified from [2]) </font>
+</p>
 <ul>
 <li>Assembly graph is tangled if SD/mosaic repeats are present <span class="math inline">→</span> fragmentation</li>
 </ul>
-<figure>
-<img align="center" src="images/tangled.png" width="60%">
-<figcaption>
-Figure 2: Tangled assembly graph from <i>E.coli</i> [1]
-</figcaption>
-</figure>
+<p align="center">
+<img src="images/tangled.png" style="width:40.0%" />
+</p>
+<p style="line-height: 80%; ">
+<font size="6"> Figure 2: Tangled assembly graph from <i>E.coli</i> [1] </font>
+</p>
 <ul>
 <li>Small differences between repeat copies are harder to resolve using error prone-reads</li>
 </ul>
@@ -349,15 +350,29 @@ Figure 2: Tangled assembly graph from <i>E.coli</i> [1]
 </ul></li>
 </ul>
 <h1 id="methods">Methods</h1>
-<p><img src="images/figure_poster.png" style="width:100.0%" /></p>
+<img src="images/figure_poster.png" style="width:100.0%" />
+<p style="line-height: 80%; ">
+<font size="6"> Figure 3: Repeat graph creation and repeat resolution (modified from [1]) </font>
+</p>
 <h1 id="results">Results</h1>
-<p><img src="images/results_HUMAN.png" style="width:100.0%" /></p>
-<p><img src="images/contiguity18.png" style="width:49.0%" /> <img src="images/contiguity20.png" style="width:49.0%" /> Figure 3: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs.</p>
+<ul>
+<li>Fly is able to create more contiguous assemblies than other state of the art sequencing algorithms</li>
+</ul>
+<img src="images/results_HUMAN.png" style="width:100.0%" />
+<p style="line-height: 80%">
+<font size="6"> Figure 4: Comparison of Flye assembly against the state of the art assemblers Canu and Masurca. Assembly of a human Oxford Nanopore long read dataset. Comparing the NGA50, reference percentage identity, reference percentage coverage and the number of missassemblies (from left to right). (Own figure from table 1 in [1]) </font>
+</p>
+<ul>
+<li>Refinements of the Flye algorithm lead to improvements in assembly contiguity <span class="math inline">→</span> better results only by algorithmic improvements</li>
+</ul>
+<img src="images/contiguity18.png" style="width:49.0%" /> <img src="images/contiguity20.png" style="width:49.0%" />
+<p style="line-height: 80%">
+<font size="6"> Figure 5: Contiguity comparison for the assembly of the same oxford nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs. (M. Kolmogorov, personal communication, June 30, 2021) </font>
+</p>
 <h1 id="references">References</h1>
 <ol type="1">
 <li><p>Kolmogorov, M., Yuan, J., Lin, Y., &amp; Pevzner, P. A. (2019). Assembly of long, error-prone reads using repeat graphs. <i>Nature Biotechnology, 37(5),</i> 540-546. https://doi.org/10.1038/s41587-019-0072-8</p></li>
 <li><p>Pevzner, P. A., Pevzner, P. A., Tang, H., &amp; Tesler, G. (2004). De novo repeat classification and fragment assembly. <i>Genome Research, 14(9),</i> 1786-1796. https://doi.org/10.1101/gr.2395204</p></li>
-<li><p>Nachname, Vorname(n) (Erscheinungsjahr). Titel. Name der Zeitschrift, Jahrgang(Ausgabe), Seitenzahlen. Heruntergeladen von URL</p></li>
 <li><p>Lin, Y., Yuan, J., Kolmogorov, M., Shen, M. W., Chaisson, M., &amp; Pevzner, P. A. (2016). Assembly of long error-prone reads using de Bruijn graphs. <i>Proceedings of the National Academy of Sciences, 113(52),</i> E8396-E8405. https://doi.org/10.1073/pnas.1604560113</p></li>
 </ol>
 </div>

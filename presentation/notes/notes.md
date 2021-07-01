@@ -8,12 +8,13 @@
 
 * for this reconstruction diff assemblers use different graph structures
 
-* due to repeats in the genome the assembly gets fragmented and leads to tangled assembly graphs which are hard to resolve
+* due to repeats in the genome the assembly gets fragmented and leads to tangled assembly graphs which are hard to resolve and which leads to fragmentation
 
 * longer reads can resolve short repeats by spanning them but with the issue of higher error rate in long reads compared to short reads resolution of longer repeats is still complicated
 -> SD and mosaic structures 
 
 * Flye assembly algorithm, able to create assemblies which have a higher contiguity than state of the art and is able to characterize most of the repeats 
+    * using repeat graphs to resolve the repeats by graph topological analysis
 
 ## Slide 3
 
