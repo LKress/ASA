@@ -5,6 +5,12 @@ M.~Kolmogorov, J.~Yuan, Y.~Lin, and P.~A. Pevzner.
 \newblock Assembly of long, error-prone reads using repeat graphs.
 \newblock {\em Nature Biotechnology}, 37(5):540--546, May 2019.
 
+\bibitem{lin_what_2014}
+Y.~Lin, S.~Nurk, and P.~A. Pevzner.
+\newblock What is the difference between the breakpoint graph and the de
+  {Bruijn} graph?
+\newblock {\em BMC genomics}, 15 Suppl 6:S6, 2014.
+
 \bibitem{pevzner_novo_2004}
 P.~A. Pevzner, P.~A. Pevzner, H.~Tang, and G.~Tesler.
 \newblock De novo repeat classification and fragment assembly.

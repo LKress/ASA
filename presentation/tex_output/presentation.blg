@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: presentation/tex_output/presentation.aux
 The style file: abbrv.bst
 Database file #1: literature/bibliography.bib
-You've used 3 entries,
+You've used 4 entries,
             2118 wiz_defined-function locations,
-            520 strings with 4511 characters,
-and the built_in function-call counts, 1431 in all, are:
-= -- 129
-> -- 104
+            526 strings with 4672 characters,
+and the built_in function-call counts, 1732 in all, are:
+= -- 157
+> -- 122
 < -- 0
-+ -- 41
-- -- 38
-* -- 140
-:= -- 253
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 28
++ -- 48
+- -- 44
+* -- 162
+:= -- 308
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 33
-empty$ -- 84
-format.name$ -- 38
-if$ -- 272
+cite$ -- 4
+duplicate$ -- 44
+empty$ -- 105
+format.name$ -- 44
+if$ -- 332
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 3
-newline$ -- 18
-num.names$ -- 6
-pop$ -- 22
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 26
 preamble$ -- 1
-purify$ -- 25
+purify$ -- 30
 quote$ -- 0
-skip$ -- 21
+skip$ -- 28
 stack$ -- 0
-substring$ -- 92
-swap$ -- 3
+substring$ -- 103
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 16
 warning$ -- 0
-while$ -- 11
-width$ -- 4
-write$ -- 35
+while$ -- 14
+width$ -- 5
+write$ -- 46

@@ -55,6 +55,8 @@
 
 ## Slide 8
 
+* using several repeat resolution steps based on the repeat graph structure Flye is able to achive almost a 2-fold improvement in contiguity compared to Canu Masurca 
+
 * using the algorithm Flye we can achieve a higher contiguity than the state of the art assemblers Canu and MaSuRCA
 
 * the benchmark dataset is a ONT human dataset and the assemblers Canu and Flye were improved using Pilon
