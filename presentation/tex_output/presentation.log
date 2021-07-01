@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.28)  1 JUL 2021 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.28)  1 JUL 2021 22:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -798,7 +798,11 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count325
 \l__pdf_internal_box=\box78
 )
-(presentation/tex_output/presentation.aux)
+(presentation/tex_output/presentation.aux
+
+LaTeX Warning: Label `fig:contig_improvements' multiply defined.
+
+)
 \openout1 = `presentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -1097,50 +1101,61 @@ Package pdftex.def Info: presentation/images/orly-owl.jpg  used on input line 8
  [9
 
 ]
-<presentation/images/genome_and_reads.png, id=91, 525.4029pt x 80.9424pt>
-File: presentation/images/genome_and_reads.png Graphic file (type png)
-<use presentation/images/genome_and_reads.png>
-Package pdftex.def Info: presentation/images/genome_and_reads.png  used on inpu
-t line 90.
-(pdftex.def)             Requested size: 312.9803pt x 48.21875pt.
+<presentation/images/genome.png, id=91, 562.2606pt x 1018.2843pt>
+File: presentation/images/genome.png Graphic file (type png)
+<use presentation/images/genome.png>
+Package pdftex.def Info: presentation/images/genome.png  used on input line 90.
+
+(pdftex.def)             Requested size: 312.9803pt x 566.83257pt.
 
 Overfull \hbox (5.69043pt too wide) in paragraph at lines 90--90
  [] 
  []
 
+
+Overfull \vbox (394.3665pt too high) detected at line 90
+ []
+
 [10
 
- <./presentation/images/genome_and_reads.png>]
-<presentation/images/disjointigs.png, id=99, 539.8569pt x 145.9854pt>
+ <./presentation/images/genome.png>]
+<presentation/images/disjointigs.png, id=99, 559.3698pt x 338.2236pt>
 File: presentation/images/disjointigs.png Graphic file (type png)
 <use presentation/images/disjointigs.png>
 Package pdftex.def Info: presentation/images/disjointigs.png  used on input lin
 e 99.
-(pdftex.def)             Requested size: 312.9803pt x 84.63594pt.
+(pdftex.def)             Requested size: 312.9803pt x 189.2491pt.
 
 Overfull \hbox (5.69043pt too wide) in paragraph at lines 99--99
  [] 
  []
 
+
+Overfull \vbox (16.78304pt too high) detected at line 99
+ []
+
 [11
 
  <./presentation/images/disjointigs.png>]
-<presentation/images/dot_plot.png, id=107, 544.9158pt x 607.068pt>
-File: presentation/images/dot_plot.png Graphic file (type png)
-<use presentation/images/dot_plot.png>
-Package pdftex.def Info: presentation/images/dot_plot.png  used on input line 1
-08.
-(pdftex.def)             Requested size: 170.71652pt x 190.18996pt.
- [12
+<presentation/images/breakpoint_graph.png, id=107, 556.479pt x 711.8595pt>
+File: presentation/images/breakpoint_graph.png Graphic file (type png)
+<use presentation/images/breakpoint_graph.png>
+Package pdftex.def Info: presentation/images/breakpoint_graph.png  used on inpu
+t line 108.
+(pdftex.def)             Requested size: 170.71652pt x 218.38226pt.
 
- <./presentation/images/dot_plot.png>]
-<presentation/images/plot_to_repeat_graph.png, id=115, 1039.9653pt x 544.9158pt
->
-File: presentation/images/plot_to_repeat_graph.png Graphic file (type png)
-<use presentation/images/plot_to_repeat_graph.png>
-Package pdftex.def Info: presentation/images/plot_to_repeat_graph.png  used on 
-input line 117.
-(pdftex.def)             Requested size: 312.9803pt x 163.9915pt.
+Overfull \vbox (14.63635pt too high) detected at line 108
+ []
+
+[12
+
+ <./presentation/images/breakpoint_graph.png>]
+<presentation/images/repeat_graph.png, id=115, 1021.1751pt x 547.8066pt>
+File: presentation/images/repeat_graph.png Graphic file (type png)
+<use presentation/images/repeat_graph.png>
+Package pdftex.def Info: presentation/images/repeat_graph.png  used on input li
+ne 117.
+(pdftex.def)             Requested size: 312.9803pt x 167.89575pt.
 
 Overfull \hbox (5.69043pt too wide) in paragraph at lines 117--117
  [] 
@@ -1148,7 +1163,7 @@ Overfull \hbox (5.69043pt too wide) in paragraph at lines 117--117
 
 [13
 
- <./presentation/images/plot_to_repeat_graph.png>]
+ <./presentation/images/repeat_graph.png>]
 <presentation/images/results_HUMAN.png, id=124, 1065.9825pt x 559.49025pt>
 File: presentation/images/results_HUMAN.png Graphic file (type png)
 <use presentation/images/results_HUMAN.png>
@@ -1234,19 +1249,38 @@ Package pdftex.def Info: presentation/images/SDs.png  used on input line 207.
  [23
 
  <./presentation/images/SDs.png>]
-<presentation/images/contigity_improvement.png, id=200, 1806.75pt x 737.75626pt
->
-File: presentation/images/contigity_improvement.png Graphic file (type png)
-<use presentation/images/contigity_improvement.png>
-Package pdftex.def Info: presentation/images/contigity_improvement.png  used on
- input line 221.
-(pdftex.def)             Requested size: 312.9803pt x 127.79218pt.
+<presentation/images/repeat_resolution.png, id=200, 1097.7813pt x 470.4777pt>
+File: presentation/images/repeat_resolution.png Graphic file (type png)
+<use presentation/images/repeat_resolution.png>
+Package pdftex.def Info: presentation/images/repeat_resolution.png  used on inp
+ut line 218.
+(pdftex.def)             Requested size: 312.9803pt x 134.13779pt.
 
-Overfull \hbox (5.69043pt too wide) in paragraph at lines 221--221
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 218--218
  [] 
  []
 
 [24
+
+ <./presentation/images/repeat_resolution.png>]
+<presentation/images/contigity_improvement.png, id=208, 1806.75pt x 737.75626pt
+>
+File: presentation/images/contigity_improvement.png Graphic file (type png)
+<use presentation/images/contigity_improvement.png>
+Package pdftex.def Info: presentation/images/contigity_improvement.png  used on
+ input line 232.
+(pdftex.def)             Requested size: 312.9803pt x 127.79218pt.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 232--232
+ [] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:contig_im
+provements}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.232   \end{frame}
+                    [25
 
  <./presentation/images/contigity_improvement.png>]
 \tf@nav=\write6
@@ -1258,20 +1292,24 @@ Overfull \hbox (5.69043pt too wide) in paragraph at lines 221--221
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
 
 (presentation/tex_output/presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 236.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 22338 strings out of 483130
- 445418 string characters out of 5963883
- 676158 words of memory out of 5000000
- 36772 multiletter control sequences out of 15000+600000
+ 22348 strings out of 483130
+ 445638 string characters out of 5963883
+ 676197 words of memory out of 5000000
+ 36779 multiletter control sequences out of 15000+600000
  541430 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  66i,13n,88p,1901b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1282,11 +1320,11 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on presentation/tex_output/presentation.pdf (24 pages, 2546906 b
+Output written on presentation/tex_output/presentation.pdf (25 pages, 3153765 b
 ytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
- 65 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
