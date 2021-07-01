@@ -30,11 +30,9 @@
     
 []    Die Forschungsfrage muss klar erkenntlich sein
     
-[]    Abbildungen müssen von ausreichend hoher Qualität sein, dass sie auf einem A0 
+[]    Abbildungen müssen von ausreichend hoher Qualität sein, dass sie auf einem A0 Ausdruck nicht unscharf werden
     
-[]    Ausdruck nicht unscharf werden
-    
-[]    Das Poster soll den roten Faden durch die Studie darstellen
+[x]    Das Poster soll den roten Faden durch die Studie darstellen
     
 []   Text soll sich auf das maximal notwendige beschränken (Anmerkung: Ein Poster lebt davon präsentiert zu werden). Langer Fließtext sollte vermieden werden (Ausnahme: Abstract)
     
@@ -46,4 +44,4 @@
     
 []    Abbildungen und Tabellen müssen in der Regel mit Nummer und Titel und ggf. einer kurzen Beschreibung versehen sein. In begründeten(!) Einzelfällen (je nach Layout-Wahl) kann dies aber entfallen
     
-[]    Eine exzessive Verwendung von Farben sollte vermieden werden
+[x]    Eine exzessive Verwendung von Farben sollte vermieden werden

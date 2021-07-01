@@ -1,7 +1,7 @@
 \documentclass{beamer}
 \usetheme{metropolis}           % Use metropolis theme
 \definecolor{goethe_blau}{HTML}{00618F} % define goethe color
-%\setbeamercolor{frametitle}{bg=goethe_blau}
+\setbeamercolor{frametitle}{bg=goethe_blau}
 \setbeamercolor{alerted text}{fg=goethe_blau} % use goethe color
 
 
@@ -32,7 +32,7 @@
     \begin{itemize}[<+- | alert@+>]
       \item Assembly: reconstruct target sequence from the reads
 
-      \item Different assemblers, different graph structures (De-Bruijn, Overlap-layout, String)
+      \item Different assemblers, different graph structures
 
       \item Repeats $\rightarrow$ assembly fragmentation
       \begin{figure}
@@ -41,11 +41,20 @@
         \label{fig:tangled}
       \end{figure}
 
-      \item Error rate long read $\leftrightarrow$ short read
+      \item Small differences between repeat copies $\rightarrow$ hard to
+      resolve with error-prone reads
 
-      \item Flye $\rightarrow$ resolve these repeats correctly, create contiguous assemblies
     \end{itemize}
   \end{frame}
+
+  
+  %\begin{frame}{Aim}
+  %  \begin{itemize}[<+- | alert@+>]
+  %    \item correct resolvation of repetetive regions
+  %    \item assemble the long error-prone reads correctly
+  %    \item create contiguous assembly
+  %  \end{itemize}
+  %\end{frame}
 
   %\section{Second Section}
 
@@ -176,7 +185,7 @@
     \begin{itemize}
       \item A-Bruijn graph (alignments) generalizes the de Bruijn graph
 
-      \item "We thus argue that the time has come to explain that the breakpoint graphs and the de Bruijn graphs are two identical data structures (if one ignores a cosmetic difference between them) as they both represent specific instances of a general notion of the A-Bruijn graph introduced in [13]. The A-Bruijn graphs are based on representing genomes as sets of labeled paths and further gluing identically labeled edges (breakpoint graphs) or vertices (de Bruijn graphs) in the resulting paths." \cite{pevzner_novo_2004}
+      \item "We thus argue that the time has come to explain that the breakpoint graphs and the de Bruijn graphs are two identical data structures (if one ignores a cosmetic difference between them) as they both represent specific instances of a general notion of the A-Bruijn graph introduced in \cite{lin_what_2014}. The A-Bruijn graphs are based on representing genomes as sets of labeled paths and further gluing identically labeled edges (breakpoint graphs) or vertices (de Bruijn graphs) in the resulting paths." \cite{pevzner_novo_2004}
 
       \item de Bruijn graphs need correct bases
       
