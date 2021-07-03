@@ -10,8 +10,7 @@
 
 * due to repeats in the genome the assembly gets fragmented and leads to tangled assembly graphs which are hard to resolve and which leads to fragmentation
 
-* longer reads can resolve short repeats by spanning them but with the issue of higher error rate in long reads compared to short reads resolution of longer repeats is still complicated
--> SD and mosaic structures 
+* longer reads such as segmental duplications or mosaic structures can resolve short repeats by spanning them but with the issue of higher error rate in long reads compared to short reads resolution of longer repeats is still complicated
 
 * Flye assembly algorithm, able to create assemblies which have a higher contiguity than state of the art and is able to characterize most of the repeats 
     * using repeat graphs to resolve the repeats by graph topological analysis
@@ -46,7 +45,8 @@
 
 * we project the endpoints of these repeats to the main diagonal 
 
--> endpoints übergänge repeat nicht repeat and vice versa
+* endpoints represent the transitions of non repeating regions to repeating regions and vice versa
+
 ## Slide 7
 
 * now the same colored poins are clustered together which gives us the repeat graph on the right hand side
@@ -60,8 +60,6 @@
 * using the algorithm Flye we can achieve a higher contiguity than the state of the art assemblers Canu and MaSuRCA
 
 * the benchmark dataset is a ONT human dataset and the assemblers Canu and Flye were improved using Pilon
-
--> Pilon in references
 
 * the reference identity is almost the same as the other assemblers (take into account that the y scale is quite narrow)
 
