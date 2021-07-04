@@ -33,9 +33,9 @@ titlebox_borderwidth: 1cm
 sectitle_bgcol: "#00628f"
 sectitle_borderwidth: 0
 
-
 poster_width: 841mm
 poster_height: 1189mm
+
 
 titletext_fontfamily: Fira+Sans+Condensed
 font_family: Fira Sans Condensed
