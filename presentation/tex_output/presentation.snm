@@ -5,8 +5,11 @@
 \beamer@slide {fig:bp_graph}{12}
 \beamer@slide {fig:repeat_graph}{13}
 \beamer@slide {fig:results}{14}
-\beamer@slide {fig:qr}{17}
+\beamer@slide {fig:qr}{15}
 \beamer@slide {fig:dotp_creation}{20}
 \beamer@slide {fig:SD}{23}
-\beamer@slide {fig:contig_improvements}{24}
-\beamer@slide {fig:contig_improvements}{26}
+\beamer@slide {fig:repgraph1}{24}
+\beamer@slide {fig:repgraph2}{25}
+\beamer@slide {fig:repgraph3}{26}
+\beamer@slide {fig:contig_improvements}{27}
+\beamer@slide {fig:contig_improvements}{29}

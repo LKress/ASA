@@ -18,8 +18,8 @@
 \usepackage{caption}
 
 \title{Assembly of long, error-prone reads using repeat graphs}
-\date{\today}
-\author{Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, and Pavel A. Pevzner}
+\date{July 5, 2021}
+\author{Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin and Pavel A. Pevzner}
 \institute{Presented by: Johannes Hausmann, Luis Kress}
 
 
@@ -37,7 +37,7 @@
       \item Repeats $\rightarrow$ assembly fragmentation
       \begin{figure}
         \includegraphics[width=3cm]{presentation/images/tangled.png}
-        \caption{Tangled assembly graph of \textit{E.coli}\cite{kolmogorov_assembly_2019}}
+        \caption*{Tangled assembly graph of \textit{E.coli} \cite{kolmogorov_assembly_2019}}
         \label{fig:tangled}
       \end{figure}
 
@@ -65,7 +65,7 @@
       \item Flye uses a different approach \cite{kolmogorov_assembly_2019}:
       
       \begin{itemize}[<+- | alert@+>]
-        \item we don't care about the repeats \only<4>{(at least at the initial stage)}
+        \item we don't care about the correct contig assembly \only<4>{(at least at the initial stage)}
         \begin{figure}
           %\captionsetup{labelformat=empty}
           \includegraphics[width=2.5cm]{presentation/images/orly-owl.jpg}
@@ -76,7 +76,7 @@
       %  \item correct assembly graph 
       \end{itemize}
 
-      \item Generate paths from overlapping reads without checking for correct repeat resolution $\rightarrow$ Disjointigs
+      \item Generate arbitary paths from overlapping reads $\rightarrow$ Disjointigs
     \end{itemize}
   \end{frame}
 
@@ -124,6 +124,15 @@
     \end{figure}
   \end{frame}
 
+  \begin{frame}{Git (presentation and poster)}
+    \begin{figure}
+      %\captionsetup{labelformat=empty}
+      \includegraphics[width=6cm]{presentation/images/qr-code.png}
+      \caption*{https://github.com/LKress/ASA}
+      \label{fig:qr}
+    \end{figure}
+  \end{frame}
+
   \appendix
 
 
@@ -139,17 +148,6 @@
   
   \end{frame}
 
-  \begin{frame}{Git (presentation and poster)}
-
-    \begin{figure}
-      %\captionsetup{labelformat=empty}
-      \includegraphics[width=6cm]{presentation/images/qr-code.png}
-      %\caption{Link to our git repo}
-      \label{fig:qr}
-    \end{figure}
-  
-  \end{frame}
-
   \maketitle
 
   \begin{frame}[standout]
@@ -159,14 +157,14 @@
   \begin{frame}{Dot plot creation}
     \begin{figure}
       \includegraphics[width=11cm]{presentation/images/dot_plot_creation.png}
-      \caption{Dot plot creation}
+      \caption*{Dot plot creation \cite{kolmogorov_assembly_2019}}
       \label{fig:dotp_creation}
     \end{figure}
   \end{frame}
 
   \begin{frame}{Repeat graphs}
     \begin{itemize}
-      \item generalization of de bruijn graphs
+      \item generalization of de Bruijn graphs
 
       \item structure
 
@@ -177,6 +175,7 @@
         \item from disjointigs = random walk of reads on the repeat graph 
       
         \item means the repeat graph hasn't to be known
+        \item set of disjointigs of a genome is complete if each k+1-mer from the genome is present in a disjointig from this set $\rightarrow$ repeat graph conctruction of complete set of disjointigs same result as repeat graph construction of the genome
       \end{itemize}
     \end{itemize}
   \end{frame}
@@ -196,7 +195,7 @@
   \begin{frame}{Segmental duplications}
     \begin{figure}
       \includegraphics[width=6cm]{presentation/images/SDs.png}
-      \caption{Segmental Duplications}
+      \caption*{Segmental Duplications \cite{pevzner_novo_2004}}
       \label{fig:SD}
     \end{figure}
     \begin{itemize}
@@ -206,10 +205,43 @@
     \end{itemize}
   \end{frame}
 
+  \begin{frame}{Disjointig creation}
+    \begin{figure}
+      \includegraphics[width=7cm]{presentation/images/repeat_graph_dot1.png}
+      %\caption*{}
+      \label{fig:repgraph1}
+    \end{figure}
+    %From: 
+    %https://www.youtube.com/watch?v=z6elrX-ZzW8&t=636s
+    %(Youtube nanopore talk)
+  \end{frame}
+
+  \begin{frame}{Disjointig creation}
+    \begin{figure}
+      \includegraphics[width=7cm]{presentation/images/repeat_graph_dot2.png}
+      %\caption*{}
+      \label{fig:repgraph2}
+    \end{figure}
+    %From: 
+    %https://www.youtube.com/watch?v=z6elrX-ZzW8&t=636s
+    %(Youtube nanopore talk)
+  \end{frame}
+
+  \begin{frame}{Disjointig creation}
+    \begin{figure}
+      \includegraphics[width=7cm]{presentation/images/repeat_graph_dot3.png}
+      %\caption*{}
+      \label{fig:repgraph3}
+    \end{figure}
+    %From: 
+    %https://www.youtube.com/watch?v=z6elrX-ZzW8&t=636s
+    %(Youtube nanopore talk)
+  \end{frame}
+
   \begin{frame}{Repeat resolution}
     \begin{figure}
       \includegraphics[width=11cm]{presentation/images/repeat_resolution.png}
-      \caption{Repeat resolution of the given example}
+      \caption*{Repeat resolution of the given example \cite{kolmogorov_assembly_2019}}
       \label{fig:contig_improvements}
     \end{figure}
     %From: 
@@ -232,7 +264,7 @@
   \begin{frame}{Contigity improvement}
     \begin{figure}
       \includegraphics[width=11cm]{presentation/images/contigity_improvement.png}
-      \caption{Contigity improvements}
+      \caption*{Contigity improvements (M. Kolmogorov, personal communication, 29.07.2021)}
       \label{fig:contig_improvements}
     \end{figure}
     \begin{itemize}
