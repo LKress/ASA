@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Fira Sans Condensed' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Fira+Sans+Condensed' rel='stylesheet'>
+
+
+
+<title>Assembly of long, error-prone reads using repeat graphs</title>
+
+
+
+
+
+<style>
+@page {
+size: 841mm 1189mm;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 45px;
+width: 841mm;
+height: 1189mm;
+padding: 0;
+text-align: justify;
+font-family: Fira Sans Condensed;
+}
+.poster_wrap {
+width: 841mm;
+height: 1189mm;
+padding: 0cm;
+}
+.title_container {
+width: calc(100% - 1cm - 1cm);
+height: calc(15% - 1cm - 1cm);
+overflow: hidden;
+background-color: #88c0d0;
+border: 1cm solid #00628f;
+}
+.logo_left {
+float: left;
+width: 15%;
+height: 100%;
+background-color: #88c0d0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 15%;
+height: 100%;
+background-color: #88c0d0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 70%;
+height: 100%;
+color: #ffffff;
+top: 60%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Fira+Sans+Condensed;
+}
+/* unvisited link */
+a:link {
+color: #00628f;
+text-decoration: none;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #00628f;
+text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+color: #00628f;
+text-decoration: none;
+}
+
+/* selected link */
+a:active {
+color: #00628f;
+text-decoration: none;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #88c0d0;
+-moz-column-rule-color: #88c0d0;
+column-rule-color: #88c0d0;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: 841mm;
+height: calc(100% - 17%);
+padding-top: calc(1189mm * 0.01);
+padding-bottom: calc(1189mm * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #00628f;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #ffffff;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 0;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 0 solid #88c0d0;
+background-color: #00628f;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r, pre.sourceCode.python {
+background-color: #ffffff20;
+border: solid #00628f 1mm;
+border-radius: 0.5em;
+padding: 4mm;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+div.sourceCode {
+background-color: transparent;
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+}
+code.sourceCode.r, code.sourceCode.python {
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #00628f24;
+color: #00628f;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+.caption {
+font-size: 20pt;
+}
+.table caption {
+font-size: 20pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00628f24;
+color: #88c0d0;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+color: #000000
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src=images/Goethe-Logo.svg style="width: 65%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Assembly of long, error-prone reads using repeat graphs</h1>
+<h3 id="author">Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin, Pavel A. Pevzner<sup></sup></h3>
+<h5 id="affiliation"><sup></sup> Johannes Hausmann, Luis Kress</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=images/qr-code.png style="width: 50%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<h1 id="abstract">Abstract</h1>
+<p>With the emergence and the spreading adoption of long read technologies, the assembly of genomes has improved, which may also become the “gold-standard” for <i>de novo</i> assemblies. Current long read sequencing techniques still have high error rates, which makes it more difficult to align these reads. Up to date long read assemblers are still not able to accurately resolve all repeating regions. In particular segmental duplications, long and highly homologous sequences resulted from duplications, are still problematic to resolve correctly. While genomic repeats can be better resolved using long reads, assembly with them is still challenging and not straightforward due to their error-prone nature. Here we present Flye a <i>de novo</i> assembler for long error-prone reads that creates a precise repeat graph, built in a new manner using so called disjointigs. Flye could achieve two times better contiguity for the assembly of a human Oxford Nanopore test dataset in combination with short read Illumina data in contrast to the state of the art assembler Canu. In the created repeat graph many segmental duplications are represented, from which the simple ones are already resolved by the algorithm. Our assembler shows that a genome can be accurately assembled by repeat characterization using repeat graphs. This information can also help in improving existing assemblies. With the presented algorithm, a possibility is provided to improve the contiguity and correctness of <i>de novo</i> long read genome assembly.</p>
+<h1 id="background">Background</h1>
+<ul>
+<li><p>Different assemblers, different graph structures</p></li>
+<li><p>Repeat characterization problem</p></li>
+</ul>
+<img src="images/sd.svg" style="width:100.0%" />
+<p style="line-height: 80%">
+<font size="6"> <b>Figure 1. How mosaic-like repeats arise</b> (modified from [2]) </font>
+</p>
+<ul>
+<li>Repeat rich regions <span class="math inline">→</span> fragmentation</li>
+</ul>
+<p align="center">
+<img src="images/tangled.png" style="width:40.0%" />
+</p>
+<p style="line-height: 80%; ">
+<font size="6"> <b>Figure 2. Tangled assembly graph from <i>E.coli.</i></b> [1] </font>
+</p>
+<ul>
+<li>Small differences between repeat copies → hard to resolve with error-prone reads</li>
+</ul>
+<h1 id="aim">Aim</h1>
+<ul>
+<li><p>Resolve repetetive regions</p></li>
+<li><p>Assemble the long error-prone reads correctly</p></li>
+<li><p>Create contiguous assemblies</p></li>
+</ul>
+<h1 id="methods">Methods</h1>
+<img src="images/figure_poster.svg" style="width:100.0%" />
+<p style="line-height: 80%; ">
+<font size="6"> <b>Figure 3. Repeat graph creation and repeat resolution.</b> (modified from [1]) </font>
+</p>
+<h1 id="results">Results</h1>
+<ul>
+<li>Fly is able to create more contiguous assemblies than other state of the art tools</li>
+</ul>
+<img src="images/results_HUMAN.png" style="width:100.0%" />
+<p style="line-height: 80%">
+<font size="6"> <b>Figure 4. Quast benchmark of Flye and other state of the art assemblers.</b>[3] Comparison of Flye assembly against the state of the art assemblers Canu and Masurca. Assembly of a human Oxford Nanopore long read dataset. Comparing the NGA50, reference percentage identity, reference percentage coverage and the number of missassemblies (from left to right). (Own figure from data of table 1 [1]) </font>
+</p>
+<ul>
+<li><p>Flye is already able to resolve short and simple segmental duplications (SDs)</p></li>
+<li><p>To resolve longer and more complex SDs the algorithms need to be improved</p></li>
+<li><p>Refinements of the Flye algorithm lead to improvements in assembly contiguity <span class="math inline">→</span> better results only by algorithmic improvements</p></li>
+</ul>
+<img src="images/contiguity18.png" style="width:49.0%" /> <img src="images/contiguity20.png" style="width:49.0%" />
+<p style="line-height: 80%">
+<font size="6"> <b>Figure 5: Improvement of the Flye algorithm.</b> Contiguity comparison for the assembly of the same Oxford Nanopore human dataset using different versions of the Flye assembler. Different colors correspond to different contigs. (M. Kolmogorov, personal communication, June 30, 2021) </font>
+</p>
+<h1 id="acknowledgement">Acknowledgement</h1>
+<p>We would like to thank Mikhail Kolmogorov for providing us high quality figures and answering our questions in a quick and uncomplicated manner.</p>
+<h1 id="references">References</h1>
+<div style="font-size:24pt;">
+<ol type="1">
+<li><p>Kolmogorov, M., Yuan, J., Lin, Y., &amp; Pevzner, P. A. (2019). Assembly of long, error-prone reads using repeat graphs. <i>Nature Biotechnology, 37(5),</i> 540-546. https://doi.org/10.1038/s41587-019-0072-8</p></li>
+<li><p>Pevzner, P. A., Pevzner, P. A., Tang, H., &amp; Tesler, G. (2004). <i>De novo</i> repeat classification and fragment assembly. <i>Genome Research, 14(9),</i> 1786-1796. https://doi.org/10.1101/gr.2395204</p></li>
+<li><p>Gurevich, A., Saveliev, V., Vyahhi, N., &amp; Tesler, G. (2013). QUAST: Quality assessment tool for genome assemblies. <i>Bioinformatics (Oxford, England), 29(8),</i> 1072-1075. https://doi.org/10.1093/-bioinformatics/btt086</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
