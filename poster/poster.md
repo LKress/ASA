@@ -16,6 +16,9 @@ logoright_name: images/qr-code.png
 primary_colour: "#88c0d0"
 secondary_colour: "#00628f"
 accent_colour: "#00628f"
+title_textcol: "#ffffff"
+author_textcol: "#00628f"
+affiliation_textcol: "#ffffff"
 
 output: 
   posterdown::posterdown_html:
