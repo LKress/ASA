@@ -34,15 +34,15 @@ sectitle_bgcol: "#00628f"
 sectitle_borderwidth: 0
 
 
-poster_width: 844mm
-poster_height: 1192mm
+poster_width: 841mm
+poster_height: 1189mm
 
 titletext_fontfamily: Fira+Sans+Condensed
 font_family: Fira Sans Condensed
 ---
 # Abstract
 
-With the emergence and the spreading adoption of long-read technologies, the assembly
+With the emergence and the spreading adoption of long read technologies, the assembly
 of genomes has improved, which may also become the "gold-standard" for <i>de novo</i> assemblies. Current long read sequencing techniques still have high error rates, which makes it more difficult to align these reads. Up to date long read assemblers are still not able to accurately resolve all repeating regions. In particular segmental duplications, long and highly homologous sequences resulted from duplications, are still problematic to resolve correctly. While genomic repeats can be better resolved using long reads, assembly with them is still challenging and not straightforward due to their error-prone nature. Here we present Flye a <i>de novo</i> assembler for long error-prone reads, by creating a precise repeat graph, built in a new manner using so called disjointigs. Flye could achieve two times better contiguity for the assembly of a human Oxford Nanopore test dataset in combination with short read Illumina data in contrast to the state of the art assembler Canu. In the created repeat graph many segmental duplications are represented, from which the simple ones are already resolved by the algorithm. Our assembler shows that a genome can be accurately assembled by repeat characterization using repeat graphs. This information can also help in improving existing assemblies. With the presented algorithm, a
 possibility is provided to improve the contiguity and correctness of <i>de novo</i> long read genome assembly.
 
@@ -54,10 +54,10 @@ possibility is provided to improve the contiguity and correctness of <i>de novo<
 
 * repeat characterization problem
 
-![](images/sd.png){ width=100% }
+![](images/sd.svg){ width=100% }
 <p style="line-height: 80%">
 <font size="6">
-<b>Figure 1. Repeat formation.</b> How mosaic-like repeats arise (modified from [2])
+<b>Figure 1. How mosaic-like repeats arise</b> (modified from [2])
 </font>
 </p>
 
@@ -130,7 +130,7 @@ We would like to thank Mikhail Kolmogorov for providing us high quality figures 
 
 # References
 
-<div style="font-size:25pt;">
+<div style="font-size:24pt;">
 1. Kolmogorov, M., Yuan, J., Lin, Y., & Pevzner, P. A. (2019). Assembly of long, error-prone reads using repeat graphs. <i>Nature Biotechnology, 37(5),</i> 540-546. https://doi.org/10.1038/s41587-019-0072-8
 
 2. Pevzner, P. A., Pevzner, P. A., Tang, H., & Tesler, G. (2004). <i>De novo</i> repeat classification and fragment assembly. <i>Genome Research, 14(9),</i> 1786-1796. https://doi.org/10.1101/gr.2395204
