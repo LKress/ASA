@@ -43,7 +43,7 @@ font_family: Fira Sans Condensed
 # Abstract
 
 With the emergence and the spreading adoption of long read technologies, the assembly
-of genomes has improved, which may also become the "gold-standard" for <i>de novo</i> assemblies. Current long read sequencing techniques still have high error rates, which makes it more difficult to align these reads. Up to date long read assemblers are still not able to accurately resolve all repeating regions. In particular segmental duplications, long and highly homologous sequences resulted from duplications, are still problematic to resolve correctly. While genomic repeats can be better resolved using long reads, assembly with them is still challenging and not straightforward due to their error-prone nature. Here we present Flye a <i>de novo</i> assembler for long error-prone reads, by creating a precise repeat graph, built in a new manner using so called disjointigs. Flye could achieve two times better contiguity for the assembly of a human Oxford Nanopore test dataset in combination with short read Illumina data in contrast to the state of the art assembler Canu. In the created repeat graph many segmental duplications are represented, from which the simple ones are already resolved by the algorithm. Our assembler shows that a genome can be accurately assembled by repeat characterization using repeat graphs. This information can also help in improving existing assemblies. With the presented algorithm, a
+of genomes has improved, which may also become the "gold-standard" for <i>de novo</i> assemblies. Current long read sequencing techniques still have high error rates, which makes it more difficult to align these reads. Up to date long read assemblers are still not able to accurately resolve all repeating regions. In particular segmental duplications, long and highly homologous sequences resulted from duplications, are still problematic to resolve correctly. While genomic repeats can be better resolved using long reads, assembly with them is still challenging and not straightforward due to their error-prone nature. Here we present Flye a <i>de novo</i> assembler for long error-prone reads that creates a precise repeat graph, built in a new manner using so called disjointigs. Flye could achieve two times better contiguity for the assembly of a human Oxford Nanopore test dataset in combination with short read Illumina data in contrast to the state of the art assembler Canu. In the created repeat graph many segmental duplications are represented, from which the simple ones are already resolved by the algorithm. Our assembler shows that a genome can be accurately assembled by repeat characterization using repeat graphs. This information can also help in improving existing assemblies. With the presented algorithm, a
 possibility is provided to improve the contiguity and correctness of <i>de novo</i> long read genome assembly.
 
 
@@ -52,7 +52,7 @@ possibility is provided to improve the contiguity and correctness of <i>de novo<
 * Different assemblers, different graph structures
 
 
-* repeat characterization problem
+* Repeat characterization problem
 
 ![](images/sd.svg){ width=100% }
 <p style="line-height: 80%">
@@ -79,11 +79,11 @@ possibility is provided to improve the contiguity and correctness of <i>de novo<
 
 # Aim
     
-* resolve repetetive regions
+* Resolve repetetive regions
 
-* assemble the long error-prone reads correctly
+* Assemble the long error-prone reads correctly
 
-* create contiguous assemblies
+* Create contiguous assemblies
 
 
 # Methods
@@ -104,7 +104,7 @@ possibility is provided to improve the contiguity and correctness of <i>de novo<
 ![](images/results_HUMAN.png){width=100%}
 <p style="line-height: 80%">
 <font size="6">
-<b>Figure 4. Quast benchmark of Flye and other state of the art assemblers.</b> [3] Comparison of Flye assembly against the state of the art assemblers Canu and Masurca. Assembly of a human Oxford Nanopore long read dataset. Comparing the NGA50, reference percentage identity, reference percentage coverage and the number of missassemblies (from left to right). (Own figure from data of table 1 [1]) 
+<b>Figure 4. Quast benchmark of Flye and other state of the art assemblers.</b>[3] Comparison of Flye assembly against the state of the art assemblers Canu and Masurca. Assembly of a human Oxford Nanopore long read dataset. Comparing the NGA50, reference percentage identity, reference percentage coverage and the number of missassemblies (from left to right). (Own figure from data of table 1 [1]) 
 </font>
 </p>
 
