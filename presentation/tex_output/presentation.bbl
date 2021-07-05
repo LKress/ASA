@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{gurevich_quast_2013}
+A.~Gurevich, V.~Saveliev, N.~Vyahhi, and G.~Tesler.
+\newblock {QUAST}: quality assessment tool for genome assemblies.
+\newblock {\em Bioinformatics (Oxford, England)}, 29(8):1072--1075, Apr. 2013.
+
 \bibitem{kolmogorov_assembly_2019}
 M.~Kolmogorov, J.~Yuan, Y.~Lin, and P.~A. Pevzner.
 \newblock Assembly of long, error-prone reads using repeat graphs.
@@ -22,5 +27,10 @@ B.~J. Walker, T.~Abeel, T.~Shea, M.~Priest, A.~Abouelliel, S.~Sakthikumar,
 \newblock Pilon: an integrated tool for comprehensive microbial variant
   detection and genome assembly improvement.
 \newblock {\em PloS One}, 9(11):e112963, 2014.
+
+\bibitem{zimin_masurca_2013}
+A.~V. Zimin, G.~Marçais, D.~Puiu, M.~Roberts, S.~L. Salzberg, and J.~A. Yorke.
+\newblock The {MaSuRCA} genome assembler.
+\newblock {\em Bioinformatics}, 29(21):2669--2677, Nov. 2013.
 
 \end{thebibliography}

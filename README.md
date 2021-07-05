@@ -2,10 +2,35 @@
 
 Share directory to work on our presentation for ASA-S.
 
+---
+
+We are presenting the article "Assembly of long, error-prone reads using repeat graphs" by Mikhail Kolmogorov, Jeffrey Yuan, Yu Lin and Pavel A Pevzner published in May 2019.
+
+
+## Poster
+
 Our poster can be downloaded here: https://github.com/LKress/ASA/blob/main/poster/poster.pdf
 
 <img src="poster/screenshot_poster.png" width="400">
 
-Our presentation can be downloaded here: https://github.com/LKress/ASA/blob/main/presentation/presentation.pdf
+## Presentation
+
+Our presentation can be downloaded here: https://github.com/LKress/ASA/blob/main/presentation/presentation_final.pdf
 
 <img src="presentation/screenshot_presentation.png" width="400">
+
+## Manual
+
+### Compile documents
+
+There are following commands to compile/create the needed documents:
+
+* `make ppt` compiles the presentation
+
+* `make post` compiles the poster
+
+* `make plot` creates the result plot
+
+### Figures
+
+The figures on the poster and the presentation were created using drawio (https://app.diagrams.net/) and are modified from the paper of Kolmogorov et al. 2019.
