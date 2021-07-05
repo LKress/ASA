@@ -62,10 +62,13 @@
     \begin{itemize}[<+- | alert@+>]
       \item Most assemblers spend much time on correct contig assembly
 
-      \item Flye uses a different approach \cite{kolmogorov_assembly_2019}:
+      \item Flye uses a different approach:
       
       \begin{itemize}[<+- | alert@+>]
-        \item we don't care about the correct contig assembly \only<4>{(at least at the initial stage)}
+        \item we don't care about the correct contig assembly
+        \begin{description}
+          \only<4,5>{\item $\rightarrow$ at least at the initial stage}
+        \end{description}
         \begin{figure}
           %\captionsetup{labelformat=empty}
           \includegraphics[width=2.5cm]{presentation/images/orly-owl.jpg}
@@ -75,7 +78,7 @@
         
       %  \item correct assembly graph 
       \end{itemize}
-
+      
       \item Generate arbitary paths from overlapping reads $\rightarrow$ Disjointigs
     \end{itemize}
   \end{frame}
@@ -141,6 +144,7 @@
     %  dir: \thepwd
     %\end{small}}
     %{\small dir: \thepwd \par}
+    \nocite{kolmogorov_assembly_2019}
     \nocite{walker_pilon_2014}
     %\printbibliography
     \bibliography{literature/bibliography.bib}
