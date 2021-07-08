@@ -6,5 +6,5 @@
 
 * [De Novo Repeat Classification and Fragment Assembly](https://genome.cshlp.org/content/14/9/1786.full)
 
-
+* [Genome Assembly ofLongError-ProneReads Using De Bruijn Graphsand Repeat Graphs](https://escholarship.org/content/qt62v8d30p/qt62v8d30p_noSplash_f95b9d271de9429e9e037cdca84873ec.pdf?t=pp2o4p)
 
