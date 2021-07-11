@@ -1,4 +1,4 @@
-# ASA-Seminar
+# Algorithmen der Sequenzanalyse Seminar
 
 ---
 
